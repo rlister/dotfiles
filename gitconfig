@@ -1,0 +1,4 @@
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/ric/.gitignore_global

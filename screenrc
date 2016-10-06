@@ -1,0 +1,57 @@
+##-*-shell-script-*-
+## Ric's config for gnu screen
+
+## caption (use lastline for tabs)
+## %{-s db}  standout off, default bg, blue fg
+## %H        hostname of machine running screen
+## %-Lw      windows to left of current
+## %{.y}     unchanged bg, yellow fg
+## %n:%t     current window number:title
+## %{-}      restore colors from before last change
+## %+Lw      windows to right of current
+## %45>      mark posn for next truncation to 45% of area
+## %=        pad to right (like TeX hfill)
+## %h        hardstatus
+## %-0<      fill from right to mark truncation point
+#caption always "%{-s db}%-Lw%{.c}%n:%t%{-}%+Lw%45>%=%h%-0<"
+#caption always "%{-s db}|%H| %-Lw%{.c}%n%{-}%+Lw"
+caption always "%{-s db}|%H| %-Lw%{.c}%n*%f %t%{-}%+Lw"
+
+## hardstatus (update xterm title)
+hardstatus string "%H: [screen %-n - %t] [$HOSTNAME]"
+
+## default title for new windows
+shelltitle ''
+
+#setenv RIC $WINDOWID
+
+## use C-z as escape key instead of C-a
+escape ''
+escape ^Zz
+
+## make 'C-z b' behave like 'C-X b' in emacs (toggle between buffers/windows)
+bind b other
+
+## gimme long windowlist instead of short for C-x w
+#bind w windowlist
+
+## no visual bell (flash)
+vbell off
+vbell_msg "x"
+
+## fix xterm's scrollbar
+termcapinfo xterm ti@:te@
+
+## increase scrollback buffer
+defscrollback 5000
+
+## bind '>' to copy from scrollback mode into X selection
+bindkey -m > eval "stuff ' '" writebuf "exec sh -c 'xsel -n < /tmp/screen-exchange'"
+
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason
+attrcolor b ".I" 
+# tell screen how to set colors. AB = background, AF=foreground 
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm' 
+# erase background with current bg color 
+#defbce "on"

@@ -1,0 +1,176 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! Rics Xdefaults
+!! Process this with 'xrdb -load .Xdefaults' to take effect.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! XTerm
+
+XTerm*saveLines:		2000
+!XTerm*font: -b&h-lucidatypewriter-medium-r-normal-sans-12-*-*-*-m-*-iso8859-1
+!XTerm*font:  			lucidasanstypewriter-10
+!XTerm*font: -windows-dina-medium-r-normal--13-*-*-*-c-*-microsoft-cp1252
+XTerm*foreground:  		White
+
+XTerm*cursorColor: 		LimeGreen
+
+!! make Meta behave in emacs -nw
+XTerm*metaSendsEscape:      	true
+
+!! triple-click on a line does not select \n at end
+XTerm*cutNewline: false
+
+!! other things to try
+!!XTerm*eightBitInput:        false
+!!XTerm*backarrowKey:         false
+!!XTerm*modifier:             meta
+
+XTerm*ScrollBar:		off
+XTerm*Scrollbar*foreground:	DodgerBlue4
+XTerm*Scrollbar*background:     Black
+
+!XTerm.vt100.geometry:		80x44+66+0
+XTerm.vt100.geometry:		80x48
+
+XTerm.vt100.background:		Black
+XTerm.vt100.foreground:		White
+
+XTerm*pointerColor:		White
+XTerm*pointerColorBackground:	Black
+XTerm*pointerShape:		xterm
+
+XTerm*vtMenu*background:	DodgerBlue4
+
+!! font menu (right-click)
+XTerm*fontMenu*background:	DodgerBlue4
+XTerm*fontMenu.Label:  		VT Fonts
+XTerm*fontMenu*fontdefault*Label: Ric Default (10)
+
+XTerm*fontMenu*font1*Label:     Unreadable
+XTerm*VT100*font1:              nil2
+
+XTerm*fontMenu*font2*Label:     Tiny (5)
+XTerm*VT100*font2:              5x8
+
+XTerm*fontMenu*font3*Label:     Small (8)
+XTerm*VT100*font3:              lucidasanstypewriter-8
+
+XTerm*fontMenu*font4*Label:     Medium (10)
+XTerm*VT100*font4:              lucidasanstypewriter-10
+
+XTerm*fontMenu*font5*Label:     Large (12)
+XTerm*VT100*font5:              lucidasanstypewriter-12
+
+XTerm*fontMenu*font6*Label:     Huge (14)
+XTerm*VT100*font6:              lucidasanstypewriter-14
+
+XTerm*fontMenu*fontescape*Label: Escape Sequence
+XTerm*fontMenu*fontsel*Label:	Selection
+
+
+XTerm*mainMenu*background:	DodgerBlue4
+
+XTerm*colorMode: 		True
+
+XTerm*VT100*color0: 		Black
+XTerm*VT100*color1: 		Red
+XTerm*VT100*color2: 		Green
+XTerm*VT100*color3: 		Yellow
+!XTerm*VT100*color4: 		MediumSlateBlue
+XTerm*VT100*color4: 		#B5A0FF
+XTerm*VT100*color5: 		Gray
+XTerm*VT100*color6: 		Cyan
+XTerm*VT100*color7: 		White
+
+XTerm*VT100*color8: 		Black
+XTerm*VT100*color9: 		Red
+XTerm*VT100*color10: 		Green
+XTerm*VT100*color11: 		Yellow
+XTerm*VT100*color12: 		#B5A0FF
+XTerm*VT100*color13: 		Gray
+XTerm*VT100*color14: 		Cyan
+XTerm*VT100*color15: 		White
+
+XTerm*dynamicColor: 		On
+
+
+!! these may only work with new xterm (xterm-94)
+XTerm*vt100*highlightColor:	MidnightBlue
+XTerm*vt100*pointerColor:	LimeGreen
+XTerm*vt100*rightScrollBar:	True
+
+!! turn on active icons
+XTerm*vt100*activeIcon:		On
+
+!XTerm*VT100*colorAttrMode:	On
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+gnuplot*background: black
+gnuplot*foreground: white
+gnuplot*axisColor: white
+gnuplot*textColor: white
+gnuplot*borderColor: darkgrey
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! xfig
+Fig*background: gray
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! Emacs
+
+!! do fonts here, emacs 21.4.1 has slow startup with font in .emacs
+!Emacs*font: 			lucidasanstypewriter-10
+!Emacs*font: -b&h-lucidatypewriter-medium-r-normal-sans-10-*-*-*-m-*-iso8859-1
+!Emacs*menubar*font: 		lucidasanstypewriter-10
+
+!! need this?
+Emacs.fontBackend: xft
+
+!! menu and scrollbars
+!! these worked up to and including 21.2-33 (RH9)
+!Emacs*menubar*background:	DodgerBlue4
+!Emacs*menubar*foreground:	Cyan
+
+!! I need these with 21.3.1 (Fedora Core 1)
+!Emacs*pane*menubar*background:  DodgerBlue4
+Emacs*pane*menubar*background:  Gray20
+Emacs*pane*menubar.shadowThickness:  1
+Emacs*pane*menubar*foreground:  Cyan
+
+!! popup menus on ctrl-mouse-[123]
+!Emacs*backgroundToolBarColor:	gray20
+!Emacs*XlwScrollBar*background:	DodgerBlue4
+
+Emacs.borderColor:		Black
+
+!! popup menus
+Emacs*popup*background:		Gray20
+Emacs*popup*foreground:		Cyan
+Emacs*popup*shadowThickness:  	1
+
+!! turn off icon (good for fvwm)
+Emacs.bitmapIcon:		off
+
+!! everything else in lisp files
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! font rendering
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!Xft.dpi: 96
+! Xft.antialias: true
+! Xft.hinting: true
+! Xft.hintstyle: hintfull
+! Xft.rgba: rgb
+
+Xft.dpi:        114
+
+Xft.antialias:  true
+Xft.hinting:    true
+Xft.autohint:   true
+Xft.rgba:       rgb
+Xft.hintstyle:  hintfull
+
+! XTerm*faceName: DejaVu Sans Mono
+! *faceName: DejaVu Sans Mono
+XTerm*faceName: GohuFont
+*faceName: GohuFont
+XTerm*faceSize: 10

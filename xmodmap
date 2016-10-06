@@ -1,0 +1,14 @@
+!! Swap Caps_Lock and Control_L
+remove Lock = Caps_Lock
+keysym Caps_Lock = Control_L
+add Control = Control_L
+
+!! for Apple keyboard make Cmd->Alt and Option->Super
+remove mod1 = Alt_L
+remove mod4 = Super_L
+add mod1 = Super_L
+add mod4 = Alt_L
+
+!! exchange tilde and lesser/greater
+!keycode  94 = grave asciitilde dead_grave dead_tilde grave asciitilde
+!keycode  49 = less greater less greater bar brokenbar bar brokenbar
