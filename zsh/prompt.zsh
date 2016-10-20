@@ -55,16 +55,17 @@ PROMPT='%F{blue}%T${AWS_VAULT:+ $AWS_VAULT} %L:%F{cyan}%~${vcs_info_msg_0_}%f%(!
 # setopt transient_rprompt #only show on current prompt
 # RPROMPT="%T"
 
-## change emacs dir with shell dir
-## want this in multi-term but not emacs shell
-# if [ -n "$INSIDE_EMACS" ] && [ "$TERM" != "dumb" ]; then
-#   chpwd () {
-#     print -P "\033AnSiTc %d"
-#   }
-#   ## reset these at startup so we do not get tramp mangling local hostname
-#   # print -P "\033AnSiTu %n"
-#   # print -P "\033AnSiTc %d"
-# fi
+## change emacs dir with shell dir; want this in multi-term but not emacs shell
+if [ -n "$INSIDE_EMACS" ] && [ "$TERM" != "dumb" ]; then
+  ## reset these at startup so we do not get tramp mangling local hostname
+  print -P "\033AnSiTc %~"
+  print -P "\033AnSiTu %n"
+
+  ## run on every dir change
+  chpwd () {
+    print -P "\033AnSiTc %~"
+  }
+fi
 
 ## to do emacs-specific stuff ...
 # if [[ -z "${INSIDE_EMACS}" ]]; then
