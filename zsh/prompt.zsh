@@ -13,38 +13,10 @@ zstyle ':vcs_info:*' unstagedstr   '%F{red}-'
 zstyle ':vcs_info:*' formats       ' %c%u%F{green}%b%f'
 zstyle ':vcs_info:*' actionformats ' %c%u%F{green}%b|%F{red}%a%f '
 
-## env file changer
-# ce () {
-#   if [[ ARGC -eq 1 ]] ; then
-#     source ~/etc/env/$1 && export CE=$1
-#   else
-#     local -a envs
-#     envs=("${(f)$(ls ~/etc/env/)}")
-#     for x in $envs; do
-#       if [[ "$x" == "$CE" ]]; then
-#         echo "* $x"
-#       else
-#         echo "  $x"
-#       fi
-#     done
-#   fi
-# }
-
-## really want this just for tmux
 if [ "$TERM" != "dumb" ] ; then
-
-  ## last part of dir in title/tmux
   precmd () {
     vcs_info
-    # _ruby="$(chruby|grep '*'|sed -e 's/ \* ruby-//')"
-    # print -Pn "\e]0;%~\a"
   }
-
-  ## first part of job in title/tmux
-  # preexec () {
-  #   # arg=$1
-  #   # print -Pn "\e]0;$arg[(w)1]\a"
-  # }
 fi
 
 ## put tmux window number into prompt
@@ -66,8 +38,3 @@ if [ -n "$INSIDE_EMACS" ] && [ "$TERM" != "dumb" ]; then
     print -P "\033AnSiTc %~"
   }
 fi
-
-## to do emacs-specific stuff ...
-# if [[ -z "${INSIDE_EMACS}" ]]; then
-#   source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# fi
