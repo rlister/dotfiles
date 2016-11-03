@@ -55,7 +55,8 @@ alias gl="git log --branches --pretty='format:%C(blue)%h%Cblue%d%Creset %s %C(gr
 alias gm='git merge'
 alias gp='git push'
 alias gss='git status -s'
-alias gu='git up'               # gem install git-up
+# alias gu='git up'               # gem install git-up
+alias gu='git pull --rebase --autostash' # see https://github.com/aanand/git-up
 # alias gph='git push -u heroku master'
 # alias gpo='git push origin master'
 
