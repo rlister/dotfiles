@@ -59,6 +59,14 @@ alias gu='git up'               # gem install git-up
 # alias gph='git push -u heroku master'
 # alias gpo='git push origin master'
 
+## delete local branches that have gone from remote
+function git-prune() {
+  git checkout master
+  git fetch --all -p
+  git branch -vv | grep ": gone]" | awk  '{ print $1 }' | xargs -n 1 git branch -d
+  git checkout -
+}
+
 ## fzf checkout a branch or tag (just call git checkout if args are given)
 # function gco() {
 #   if (( $# > 0 )); then
