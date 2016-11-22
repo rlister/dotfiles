@@ -13,19 +13,20 @@ zstyle ':vcs_info:*' unstagedstr   '%F{red}-'
 zstyle ':vcs_info:*' formats       ' %c%u%F{green}%b%f'
 zstyle ':vcs_info:*' actionformats ' %c%u%F{green}%b|%F{red}%a%f '
 
+## update vcs on every prompt
 if [ "$TERM" != "dumb" ] ; then
   precmd () {
     vcs_info
   }
 fi
 
-## put tmux window number into prompt
-# tmux_window=$(tmux display-message -p '#I')
-# PROMPT='%F{blue}%T %F{magenta}${_ruby}%F{blue}${AWS_VAULT:+ $AWS_VAULT} %L:%F{cyan}%~${vcs_info_msg_0_}%f%(!.#.$) '
-PROMPT='%F{blue}%T${AWS_VAULT:+ $AWS_VAULT} %L:%F{cyan}%~${vcs_info_msg_0_}%f%(!.#.$) '
+PROMPT=$'%F{blue}%T %F{cyan}%4~ %F{green}%L:${AWS_VAULT:+$AWS_VAULT}${vcs_info_msg_0_}%f\n%(!.#.$) '
 
-# setopt transient_rprompt #only show on current prompt
-# RPROMPT="%T"
+## right prompt if not emacs shell
+# if [ "$TERM" != "dumb" ]; then
+#   RPROMPT='%L:${AWS_VAULT:+$AWS_VAULT}${vcs_info_msg_0_}%f'
+#   setopt transient_rprompt # only show on current line
+# fi
 
 ## change emacs dir with shell dir; want this in multi-term but not emacs shell
 if [ -n "$INSIDE_EMACS" ] && [ "$TERM" != "dumb" ]; then
