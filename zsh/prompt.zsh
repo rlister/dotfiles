@@ -34,8 +34,12 @@ if [ -n "$INSIDE_EMACS" ] && [ "$TERM" != "dumb" ]; then
   print -P "\033AnSiTc %~"
   print -P "\033AnSiTu %n"
 
-  ## run on every dir change
+  ## run on every dir change; note that on mac %M sends foo.local, which
+  ## ansi-term does not recognise as localhost, but hostname sends foo.home,
+  ## which it does (and thus removes hostname from default-directory)
   chpwd () {
     print -P "\033AnSiTc %~"
+    print -P "\033AnSiTu %n"
+    print -P "\033AnSiTh $(hostname -f)"
   }
 fi
