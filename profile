@@ -31,3 +31,7 @@ esac
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 export GOPATH=~/code/go
+
+if [ -f ~/.env ]; then
+  source ~/.env
+fi
