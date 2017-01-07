@@ -21,13 +21,13 @@ case $(uname) in
 esac
 
 ## for remote hosts
-export CMDLINE_EDITOR=emacs
+# export CMDLINE_EDITOR=emacs
 
 ## local
-EDITOR=e
-VISUAL=${EDITOR}
-FCEDIT=${EDITOR}
-export EDITOR VISUAL FCEDIT
+# EDITOR=e
+# VISUAL=${EDITOR}
+# FCEDIT=${EDITOR}
+# export EDITOR VISUAL FCEDIT
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 export GOPATH=~/code/go
