@@ -13,6 +13,7 @@ setopt hist_ignore_dups         # unique history entries
 setopt hist_expire_dups_first   # when trimming history, lose oldest duplicates first
 setopt hist_reduce_blanks       # trim blanks
 setopt hist_verify              # show before executing history commands
+setopt append_history           # append history list to the history file, rather than replace it
 setopt inc_append_history       # add commands as they are typed, don't wait until shell exit
 unsetopt share_history          # share hist between sessions
 setopt extended_history         # save timestamp of command and duration
