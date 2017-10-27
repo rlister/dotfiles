@@ -20,12 +20,14 @@ case $(uname) in
     ;;
 esac
 
+# alias av='aws-vault exec'
 alias ce='aws-vault exec'
 alias et="emacsclient -t -a '' $*"
 alias ec="emacsclient    -a '' $*"
 
 function fd() {(cd ~/code/spreeworks/ops && bundle exec bin/fd $*)}
 function ops() {(cd ~/code/ops && bundle exec bin/ops $*)}
+function av()  {aws-vault exec $*}
 
 ## open current tmux pane in emacs
 # alias l='f=/tmp/$(uuid) && tmux capture-pane -S 1 && tmux save-buffer $f && e $f && rm -f $f && unset f'
