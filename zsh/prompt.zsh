@@ -38,8 +38,8 @@ if [ -n "$INSIDE_EMACS" ] && [ "$TERM" != "dumb" ]; then
   ## ansi-term does not recognise as localhost, but hostname sends foo.home,
   ## which it does (and thus removes hostname from default-directory)
   chpwd () {
-    print -P "\033AnSiTc %~"
     print -P "\033AnSiTu %n"
     print -P "\033AnSiTh $(hostname -f)"
+    print -P "\033AnSiTc %~"
   }
 fi
