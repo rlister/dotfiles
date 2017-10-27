@@ -65,6 +65,9 @@ function gil() {
   rm -f "$(git rev-parse --show-toplevel)/.git/index.lock"
 }
 
+## restart macos video daemon
+alias video='sudo killall VDCAssistant'
+
 ## delete local branches that have gone from remote
 function git-prune() {
   git checkout master
