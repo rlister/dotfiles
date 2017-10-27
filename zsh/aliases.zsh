@@ -24,9 +24,7 @@ esac
 alias ce='aws-vault exec'
 alias et="emacsclient -t -a '' $*"
 alias ec="emacsclient    -a '' $*"
-
-function fd() {(cd ~/code/spreeworks/ops && bundle exec bin/fd $*)}
-function ops() {(cd ~/code/ops && bundle exec bin/ops $*)}
+alias s='bundle exec stax'
 function av()  {aws-vault exec $*}
 
 ## open current tmux pane in emacs
