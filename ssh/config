@@ -1,0 +1,12 @@
+## -*- mode: conf; -*-
+
+## client bug CVE-2016-0777 and CVE-2016-0778
+## http://undeadly.org/cgi?action=article&sid=20160114142733
+## then turned off again for Sierra OpenSSH_7.2p2, LibreSSL 2.4.1
+# UseRoaming no
+
+Host *.amazonaws.com 54.* 52.* 107.* 184.* 174.* 75.* 34.* 204.*
+  User core
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
+  # LogLevel=quiet
