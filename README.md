@@ -7,6 +7,7 @@ Make symlinks manually as needed, or with
 
 ```
 stow -t ~ bash
+stow -t ~ git
 stow -t ~ ls
 stow -t ~ ruby
 stow -t ~ tmux
