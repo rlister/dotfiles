@@ -11,6 +11,7 @@ case $(uname) in
     ;;
 
   Darwin)
+    ## brew install coreutils
     if [ -x "$(which gdircolors)" ] ; then
       eval `gdircolors ~/.dir_colors`
       LS='gls --color=tty'
