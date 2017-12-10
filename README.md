@@ -13,4 +13,5 @@ stow -t ~ ruby
 stow -t ~ tmux
 stow -t ~ vim
 stow -t ~ zsh
+stow -t ~/.ssh ssh
 ```

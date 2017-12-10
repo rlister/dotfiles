@@ -10,3 +10,5 @@ Host *.amazonaws.com 54.* 52.* 107.* 184.* 174.* 75.* 34.* 204.*
   StrictHostKeyChecking no
   UserKnownHostsFile=/dev/null
   # LogLevel=quiet
+  # for too many auth failure
+  IdentitiesOnly yes
