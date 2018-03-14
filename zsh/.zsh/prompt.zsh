@@ -20,7 +20,7 @@ if [ "$TERM" != "dumb" ] ; then
   }
 fi
 
-PROMPT=$'%F{blue}%T %F{cyan}%4~ %F{green}%L:${AWS_VAULT:+$AWS_VAULT}${vcs_info_msg_0_}%f\n%(!.#.$) '
+PROMPT=$'%F{blue}%T %F{cyan}%2~ %F{green}%L:${AWS_VAULT:+$AWS_VAULT}${vcs_info_msg_0_}%f%(!.#.$) '
 
 ## right prompt if not emacs shell
 # if [ "$TERM" != "dumb" ]; then
