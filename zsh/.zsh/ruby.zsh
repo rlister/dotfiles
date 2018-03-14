@@ -1,2 +1,2 @@
 source /usr/local/share/chruby/chruby.sh
-chruby 2.4.2 # default ruby
+chruby 2.5.0 # default ruby
