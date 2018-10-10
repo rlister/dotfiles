@@ -25,8 +25,6 @@ esac
 alias et="emacsclient -t -a '' $*"
 alias ec="emacsclient    -a '' $*"
 alias s='bundle exec stax'
-alias ar='assume-role'
-
 ## open current tmux pane in emacs
 # alias l='f=/tmp/$(uuid) && tmux capture-pane -S 1 && tmux save-buffer $f && e $f && rm -f $f && unset f'
 
