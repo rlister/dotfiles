@@ -25,8 +25,6 @@ esac
 alias et="emacsclient -t -a '' $*"
 alias ec="emacsclient    -a '' $*"
 alias s='bundle exec stax'
-## open current tmux pane in emacs
-# alias l='f=/tmp/$(uuid) && tmux capture-pane -S 1 && tmux save-buffer $f && e $f && rm -f $f && unset f'
 
 alias ls="$LS -hF"
 alias sl="$LS -hF"
@@ -39,8 +37,6 @@ alias lmi=let-me-in
 alias be='bundle exec'
 alias bi='bundle install'
 alias bu='bundle update'
-# alias dm='docker-machine'
-# function dmenv { eval "$(docker-machine env $1)" }
 
 ## git laziness
 alias gb='git branch'
@@ -54,10 +50,12 @@ alias gm='git merge'
 alias gp='git push'
 alias gpsu="git push --set-upstream origin $(git symbolic-ref --short HEAD)"
 alias gss='git status -s'
-# alias gu='git up'               # gem install git-up
 alias gu='git pull --rebase --autostash' # see https://github.com/aanand/git-up
 # alias gph='git push -u heroku master'
 # alias gpo='git push origin master'
+alias sha='git rev-parse HEAD'
+
+alias tf='terraform'
 
 function gil() {
   rm -f "$(git rev-parse --show-toplevel)/.git/index.lock"
@@ -74,33 +72,6 @@ function git-prune() {
   git checkout -
 }
 
-## fzf checkout a branch or tag (just call git checkout if args are given)
-# function gco() {
-#   if (( $# > 0 )); then
-#     git checkout $*
-#   else
-#     local tags branches target
-#     tags=$(
-#       git tag | awk '{print "\x1b[31mtag\x1b[m\t" $1}') || return
-#     branches=$(
-#       git branch --all | grep -v HEAD             |
-#         sed "s/.* //"    | sed "s#remotes/[^/]*/##" |
-#         sort -u          | awk '{print "\x1b[34;1mbranch\x1b[m\t" $1}') || return
-#     target=$(
-#       (echo "$tags"; echo "$branches") |
-#         fzf-tmux --tac -- --ansi -d "\t" -n 2) || return
-#     git checkout $(echo "$target" | awk '{print $2}')
-#   fi
-# }
-
-## fzf checkout a git commit
-# function gcoc() {
-#   local commits commit
-#   commits=$(git log --pretty=oneline --abbrev-commit --reverse) &&
-#     commit=$(echo "$commits" | fzf --tac +s +m -e) &&
-#     git checkout $(echo "$commit" | sed "s/ .*//")
-# }
-
 ## aws regions
 alias e1='AWS_REGION=us-east-1'
 alias w1='AWS_REGION=us-west-1'
@@ -114,11 +85,6 @@ fl () {
   [[ "$argv[1]" -regex-match "\." ]] || argv[1]=$argv[1]-e${n}.spree.fm
   let-me-in ${sg} -- fleetctl -ssh-timeout=60 -tunnel $argv
 }
-
-## tmux-cssh with auto-scaling IP detection
-# tmux-asg () {
-#   tmux-cssh $(asg ip $1)
-# }
 
 off () { for x in $*; do; mv $x _$x; done }
 on  () { for x in $*; do; mv $x `echo $x|sed -e 's/^_//'`; done }

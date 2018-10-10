@@ -15,7 +15,7 @@ case $(uname) in
     export PATH
     ;;
   Darwin)
-    PATH="${HOME}/bin:${PATH}:/usr/local/sbin:/usr/local/bin:/opt/local/bin:${HOME}/local/node/bin:/usr/local/opt/go/libexec/bin"
+    PATH="${HOME}/bin:${PATH}:/usr/local/sbin:/usr/local/bin:/Library/TeX/texbin"
     export PATH
     ;;
 esac
