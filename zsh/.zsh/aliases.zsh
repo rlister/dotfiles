@@ -22,11 +22,9 @@ case $(uname) in
 esac
 
 # alias av='aws-vault exec'
-alias ce='aws-vault exec'
 alias et="emacsclient -t -a '' $*"
 alias ec="emacsclient    -a '' $*"
 alias s='bundle exec stax'
-function av()  {aws-vault exec $*}
 alias ar='assume-role'
 
 ## open current tmux pane in emacs
