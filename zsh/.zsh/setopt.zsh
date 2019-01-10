@@ -1,8 +1,9 @@
 # unsetopt correct_all            # no spell-correct
 # HISTSIZE=10000
 
-SAVEHIST=10000
 HISTFILE=~/.zsh_history
+SAVEHIST=10000                  # num lines to keep in histfile
+HISTSIZE=1024                   # num lines to keep in session
 WORDCHARS=''                    # meta-move on all non-word chars
 
 setopt no_beep                  # if you beep I will be forced to kill you
