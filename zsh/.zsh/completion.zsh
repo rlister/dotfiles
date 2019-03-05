@@ -22,7 +22,8 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 
 ## list of completers to use, approx is fuzzy matcher
 # zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
-zstyle ':completion:*::::' completer _complete _approximate
+# zstyle ':completion:*::::' completer _complete _approximate
+zstyle ':completion:*::::' completer _complete
 
 ## highlight current match from list
 # zstyle ':completion:*' menu select=1 _complete _ignored _approximate
