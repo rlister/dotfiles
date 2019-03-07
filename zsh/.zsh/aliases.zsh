@@ -24,7 +24,14 @@ esac
 # alias av='aws-vault exec'
 alias et="emacsclient -t -a '' $*"
 alias ec="emacsclient    -a '' $*"
-alias s='bundle exec stax'
+
+## run stax from correct location
+function s() {
+  (
+    cd $(git rev-parse --show-toplevel)/ops;
+    bundle exec stax $*
+  )
+}
 
 alias ls="$LS -hF"
 alias sl="$LS -hF"
