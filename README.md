@@ -15,4 +15,5 @@ stow -t ~ vim
 stow -t ~ zsh
 stow -t ~/.ssh ssh
 stow -t ~ gpg
+stow -t ~ redshift
 ```
