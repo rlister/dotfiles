@@ -13,7 +13,7 @@ stow -t ~ ruby
 stow -t ~ tmux
 stow -t ~ vim
 stow -t ~ zsh
-stow -t ~/.ssh ssh
+stow -t ~ ssh
 stow -t ~ gpg
 stow -t ~ redshift
 stow -t ~ rofi
