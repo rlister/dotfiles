@@ -21,6 +21,15 @@ case $(uname) in
     ;;
 esac
 
+## redshift will stomp on this
+function brightness() {
+  if [ -z "$1" ]; then
+    xrandr --prop --verbose|grep Brightness
+  else
+    xrandr --output DP-1 --brightness "$1"
+  fi
+}
+
 # alias av='aws-vault exec'
 alias et="emacsclient -t -a '' $*"
 alias ec="emacsclient    -a '' $*"
