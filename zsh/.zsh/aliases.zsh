@@ -42,6 +42,12 @@ function s() {
   )
 }
 
+# function s() {
+#   pushd `git rev-parse --show-toplevel`/ops
+#   bundle exec stax $*
+#   popd
+# }
+
 alias ls="$LS -hF"
 alias sl="$LS -hF"
 alias ll="$LS -hFl"

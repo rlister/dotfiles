@@ -1,9 +1,10 @@
 ---
 :backtrace: false
-:benchmark: false
 :bulk_threshold: 1000
 :sources:
-- http://rubygems.org/
+- https://5bgfx7x9mSqbahS9qPPE@gem.fury.io/arcadiapower/
+- https://rubygems.org/
 :update_sources: true
 :verbose: true
-gem: --no-ri --no-rdoc
+benchmark: false
+gem: "--no-ri --no-rdoc"
