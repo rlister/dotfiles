@@ -25,4 +25,5 @@ stow -t ~ ssh
 stow -t ~ gpg
 stow -t ~ redshift
 stow -t ~ rofi
+stow -t ~ compton
 ```
