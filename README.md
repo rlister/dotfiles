@@ -8,7 +8,7 @@ Make symlinks manually as needed, or with
 For all packages:
 
 ```
-stow =t ~ *
+stow -t ~ *
 ```
 
 or per package:
