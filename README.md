@@ -26,4 +26,5 @@ stow -t ~ gpg
 stow -t ~ redshift
 stow -t ~ rofi
 stow -t ~ compton
+stow -t ~ xsession
 ```

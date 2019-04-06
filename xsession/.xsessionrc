@@ -1,0 +1,7 @@
+~/.fehbg
+xfsettingsd &
+compton &
+dwmstatus &
+unclutter -noevents -root &
+fluxgui &
+xcape -e 'Control_L=Escape'
