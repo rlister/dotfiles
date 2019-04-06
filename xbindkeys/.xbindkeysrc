@@ -1,0 +1,26 @@
+## -*- shell-script -*-
+
+"xbindkeys_show"
+  control+shift + q
+
+## audio controls
+"pactl set-sink-volume @DEFAULT_SINK@ +1000"
+  XF86AudioRaiseVolume
+
+"pactl set-sink-volume @DEFAULT_SINK@ -1000"
+  XF86AudioLowerVolume
+
+"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  XF86AudioMute
+
+## screenshot
+"flameshot gui"
+  Print
+
+## lock screen
+"slock"
+  Scroll_Lock
+
+## lock with dm greeter
+"dm-tool switch-to-greeter"
+  Mod4 + Pause
