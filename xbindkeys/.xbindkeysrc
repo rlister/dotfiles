@@ -1,4 +1,4 @@
-## -*- shell-script -*-
+## -*- conf -*-
 
 "xbindkeys_show"
   control+shift + q
