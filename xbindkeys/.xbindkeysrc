@@ -21,6 +21,10 @@
 "slock"
   Scroll_Lock
 
+## clipboard manager
+"clipmenu"
+  Pause
+
 ## lock with dm greeter
 "dm-tool switch-to-greeter"
   Mod4 + Pause

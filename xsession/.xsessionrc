@@ -4,5 +4,6 @@ compton &
 dwmstatus &
 unclutter -noevents -root &
 fluxgui &
+clipmenud &
 xbindkeys
 xcape -e 'Control_L=Escape'
