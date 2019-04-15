@@ -28,4 +28,5 @@ stow -t ~ rofi
 stow -t ~ compton
 stow -t ~ xsession
 stow -t ~ xbindkeys
+stow -t ~ dunst
 ```
