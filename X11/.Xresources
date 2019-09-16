@@ -1,0 +1,46 @@
+XTerm.vt100.faceName: xos4 Terminus:size=10:antialias=false
+
+XTerm*foreground:  	White
+XTerm*cursorColor: 	LimeGreen
+XTerm.vt100.background:	Black
+XTerm.vt100.foreground:	azure4
+XTerm*vt100*highlightColor: MidnightBlue
+XTerm.vt100.locale:     true
+
+!! menu colors
+XTerm*mainMenu*background: DodgerBlue4
+XTerm*vtMenu*background:   DodgerBlue4
+XTerm*fontMenu*background: DodgerBlue4
+
+!! use alt as in emacs instead of 8bit chars
+XTerm.vt100.metaSendsEscape: true
+
+!! default scrollback is 1024
+XTerm.vt100.saveLines: 4096
+
+!! just no
+XTerm*ScrollBar:	    off
+XTerm*vt100*rightScrollBar: True
+XTerm*Scrollbar*foreground: DodgerBlue4
+XTerm*Scrollbar*background: Black
+
+!! ansi colors
+XTerm*colorMode:    True
+XTerm*dynamicColor: On
+
+XTerm*VT100*color0:  Black
+XTerm*VT100*color1:  Red
+XTerm*VT100*color2:  Green
+XTerm*VT100*color3:  Yellow
+XTerm*VT100*color4:  #B5A0FF
+XTerm*VT100*color5:  Gray
+XTerm*VT100*color6:  Cyan
+XTerm*VT100*color7:  White
+XTerm*VT100*color8:  Black
+XTerm*VT100*color9:  Red
+XTerm*VT100*color10: Green
+XTerm*VT100*color11: Yellow
+XTerm*VT100*color12: #B5A0FF
+XTerm*VT100*color13: Gray
+XTerm*VT100*color14: Cyan
+XTerm*VT100*color15: White
