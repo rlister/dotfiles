@@ -1,6 +1,7 @@
 # -*- mode: conf; -*-
 [global]
-font = xos4 Terminus 11
+# font = xos4 Terminus 11
+font = Roboto Mono 14
 
 # Allow a small subset of html markup:
 #   <b>bold</b>
