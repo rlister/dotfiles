@@ -28,3 +28,6 @@
 ## lock with dm greeter
 "dm-tool switch-to-greeter"
   Mod4 + Pause
+
+"xdotool click 1"
+  F1
