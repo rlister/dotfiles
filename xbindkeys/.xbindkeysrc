@@ -14,7 +14,7 @@
   XF86AudioMute
 
 ## screenshot
-"flameshot gui"
+"maim -s | xclip -selection clipboard -t image/png"
   Print
 
 ## lock screen
