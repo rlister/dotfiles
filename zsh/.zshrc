@@ -4,8 +4,6 @@ source ~/.zsh/prompt.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/completion.zsh
 source ~/.zsh/ruby.zsh
-source ~/.zsh/pyenv.zsh
-source ~/.zsh/tmuxinator.zsh
 source ~/.zsh/aws.zsh
 
 ## TODO this does not belong here
