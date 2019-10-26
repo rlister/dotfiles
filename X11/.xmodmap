@@ -1,0 +1,5 @@
+!! bind menu to hyper
+remove mod4 = Hyper_L
+keycode 135 = Hyper_L
+clear Mod3
+add Mod3 = Hyper_L
