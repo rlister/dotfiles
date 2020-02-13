@@ -8,7 +8,7 @@ rofi.modi: windowcd,window,run,combi
 ! "Number of columns" Set from: Default
 ! rofi.columns:                        1
 ! "Font to use" Set from: Default
-! rofi.font:                           mono 12
+rofi.font:                           Roboto Mono 11
 ! "Border width" Set from: Default
 ! rofi.bw:                             1
 ! "Location on screen" Set from: Default
