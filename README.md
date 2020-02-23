@@ -25,7 +25,7 @@ stow -t ~ ssh
 stow -t ~ gpg
 stow -t ~ redshift
 stow -t ~ rofi
-stow -t ~ compton
+stow -t ~ picom
 stow -t ~ xsession
 stow -t ~ xbindkeys
 stow -t ~ X11
