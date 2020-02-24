@@ -7,6 +7,7 @@ hsetroot -solid black
 ## settings daemons
 #lxpolkit &
 xfsettingsd &
+xfce4-power-manager  # brightness controls
 
 ## sane trackball settings
 xinput --set-prop 10 'libinput Accel Profile Enabled' 0, 1
