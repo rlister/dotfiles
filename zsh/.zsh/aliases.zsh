@@ -116,28 +116,3 @@ on  () { for x in $*; do; mv $x `echo $x|sed -e 's/^_//'`; done }
 # rmiuntagged () {
 #   docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
 # }
-
-## fzf chruby
-# function cr() {
-#   if (( $# > 0 )); then
-#     chruby $*
-#   else
-#     local rb
-#     rb=$(/bin/ls ${HOME}/.rubies | fzf-tmux --tac) \
-  #       && chruby $rb
-#   fi
-# }
-
-## convert flac to m4a (apple lossless) for itunes import
-## needs ffmpeg from homebrew
-function flac2m4a() {
-  for f in $*; ffmpeg -i "$f" -c:a alac "${f%.*}.m4a"
-}
-
-function tell-emacs() {
-  osascript -e 'tell application "Emacs" to activate'
-}
-
-function tell-iterm2() {
-  osascript -e 'tell application "iTerm2" to activate'
-}
