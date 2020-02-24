@@ -97,6 +97,15 @@ alias s1='AWS_REGION=sa-east-1'
 off () { for x in $*; do; mv $x _$x; done }
 on  () { for x in $*; do; mv $x `echo $x|sed -e 's/^_//'`; done }
 
+## http://www.suppertime.co.uk/blogmywiki/2015/04/updated-list-of-bbc-network-radio-urls/
+alias bbc4='mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4fm_mf_p'
+alias bbc4lw='mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4lw_mf_p'
+alias bbc4ex='mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4extra_mf_p'
+alias bbc5='mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio5live_mf_p'
+alias bbcw='mplayer http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-eieuk'
+alias bbcwn='mplayer http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-einws'
+alias bbcj='mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_lrjersey_mf_p'
+
 ## docker cleanup
 # stopall () {
 #   docker stop $(docker ps -a -q)
