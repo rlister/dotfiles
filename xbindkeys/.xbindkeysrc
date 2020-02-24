@@ -4,13 +4,16 @@
   control+shift + q
 
 ## audio controls
-"pactl set-sink-volume @DEFAULT_SINK@ +1000"
+# "pactl set-sink-volume @DEFAULT_SINK@ +1000"
+"volumectl up"
   XF86AudioRaiseVolume
 
-"pactl set-sink-volume @DEFAULT_SINK@ -1000"
+# "pactl set-sink-volume @DEFAULT_SINK@ -1000"
+"volumectl down"
   XF86AudioLowerVolume
 
-"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+# "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+"volumectl toggle"
   XF86AudioMute
 
 ## screenshot
