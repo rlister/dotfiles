@@ -93,14 +93,6 @@ alias w1='AWS_REGION=us-west-1'
 alias w2='AWS_REGION=us-west-2'
 alias s1='AWS_REGION=sa-east-1'
 
-## use as e.g. fl ops <cmd>
-fl () {
-  n=$[RANDOM % 3 + 1]
-  sg=$argv[1]-ssh
-  [[ "$argv[1]" -regex-match "\." ]] || argv[1]=$argv[1]-e${n}.spree.fm
-  let-me-in ${sg} -- fleetctl -ssh-timeout=60 -tunnel $argv
-}
-
 off () { for x in $*; do; mv $x _$x; done }
 on  () { for x in $*; do; mv $x `echo $x|sed -e 's/^_//'`; done }
 
