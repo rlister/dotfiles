@@ -43,4 +43,4 @@ zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 # zstyle ':completion:*:ssh:*' group-order hosts-domain hosts-host users hosts-ipaddr
 
 ## simple completion of an array
-compctl -k '(spree-admin spree-dev spree-prod spree-pets nimbus-admin nimbus-dev personal-admin bt-prod)' av aws-vault
+# compctl -k '(spree-admin spree-dev spree-prod spree-pets nimbus-admin nimbus-dev personal-admin bt-prod)' av aws-vault
