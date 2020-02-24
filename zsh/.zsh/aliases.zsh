@@ -31,6 +31,7 @@ function brightness() {
 }
 
 # alias av='aws-vault exec'
+alias e="emacsclient -n"
 alias et="emacsclient -t -a '' $*"
 alias ec="emacsclient    -a '' $*"
 

@@ -26,7 +26,7 @@ esac
 # export CMDLINE_EDITOR=emacs
 
 ## local
-# EDITOR=e
+export EDITOR=emacsclient
 # VISUAL=${EDITOR}
 # FCEDIT=${EDITOR}
 # export EDITOR VISUAL FCEDIT
