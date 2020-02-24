@@ -20,6 +20,8 @@ if [ "$TERM" != "dumb" ] ; then
   }
 fi
 
+[[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ '
+
 ## report assume-role settings in prompt
 function aws_account {
   [ "$AWS_ACCOUNT_NAME" ] && [ "$AWS_ACCOUNT_ROLE" ] && echo "%F{blue}$AWS_ACCOUNT_NAME/$AWS_ACCOUNT_ROLE%f"
@@ -27,32 +29,8 @@ function aws_account {
 
 PROMPT=$'%F{blue}%T %F{cyan}%2~ %F{green}%L:${AWS_VAULT:+$AWS_VAULT}:$(aws_account)${vcs_info_msg_0_}%f%(!.#.$) '
 
-## right prompt if not emacs shell
-# if [ "$TERM" != "dumb" ]; then
-#   RPROMPT='%L:${AWS_VAULT:+$AWS_VAULT}${vcs_info_msg_0_}%f'
-#   setopt transient_rprompt # only show on current line
-# fi
-
-## change emacs dir with shell dir; want this in multi-term but not emacs shell
-if [ -n "$INSIDE_EMACS" ] && [ "$TERM" != "dumb" ]; then
-  ## reset these at startup so we do not get tramp mangling local hostname
-  print -P "\033AnSiTc %~"
-  print -P "\033AnSiTu %n"
-
-  ## run on every dir change; note that on mac %M sends foo.local, which
-  ## ansi-term does not recognise as localhost, but hostname sends foo.home,
-  ## which it does (and thus removes hostname from default-directory)
-  if [ "$OSTYPE" == "darwin"* ]; then
-    chpwd () {
-      print -P "\033AnSiTu %n"
-      print -P "\033AnSiTh $(hostname -f)"
-      print -P "\033AnSiTc %~"
-    }
-  else
-    chpwd () {
-      print -P "\033AnSiTu %n"
-      print -P "\033AnSiTh %M"
-      print -P "\033AnSiTc %~"
-    }
-  fi
+if [ "$INSIDE_EMACS" == "vterm" ]; then
+  chpwd() {
+    print -Pn "\e]51;A%~/\e\\";
+  }
 fi
