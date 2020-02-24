@@ -28,7 +28,7 @@ xbindkeys
 xrdb ~/.Xresources
 
 ## daemons
-# compton &
+picom &
 dunst &
 unclutter -noevents -root &
 redshift -l 38.83039:-77.19637 &
