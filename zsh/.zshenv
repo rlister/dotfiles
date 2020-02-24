@@ -37,3 +37,7 @@ export GOPATH=~/code/go
 # if [ -f ~/.env ]; then
 #   source ~/.env
 # fi
+
+## fix scrolling in firefox using libinput2 with gtk3
+## see https://wiki.archlinux.org/index.php/Firefox/Tweaks#Pixel-perfect_trackpad_scrolling
+export MOZ_USE_XINPUT2=1
