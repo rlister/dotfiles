@@ -16,10 +16,6 @@
 "volumectl toggle"
   XF86AudioMute
 
-## screenshot
-"maim -s | xclip -selection clipboard -t image/png"
-  Print
-
 ## lock screen
 "slock"
   Scroll_Lock
@@ -27,7 +23,3 @@
 ## clipboard manager
 "clipmenu"
   Pause
-
-## lock with dm greeter
-"dm-tool switch-to-greeter"
-  Mod4 + Pause
