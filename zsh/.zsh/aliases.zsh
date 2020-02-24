@@ -117,27 +117,6 @@ on  () { for x in $*; do; mv $x `echo $x|sed -e 's/^_//'`; done }
 #   docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
 # }
 
-# proxy () {
-#   server=user@1.2.3.4
-#   port=2223
-#   case "$1" in
-#     setup)
-#       sudo networksetup -setsocksfirewallproxy 'Wi-Fi' localhost $port ;;
-#     on)
-#       sudo networksetup -setsocksfirewallproxystate 'Wi-Fi' on ;;
-#     off)
-#       sudo networksetup -setsocksfirewallproxystate 'Wi-Fi' off ;;
-#     state)
-#       sudo networksetup -getsocksfirewallproxy 'Wi-Fi' ;;
-#     tunnel)
-#       ssh -v -D ${port} -N ${server} ;;
-#     ip)
-#       curl --socks5 localhost:${port} http://smart-ip.net/myip ;;
-#     *)
-#       echo "usage: proxy setup|on|off|state|tunnel|ip"
-#   esac
-# }
-
 ## fzf chruby
 # function cr() {
 #   if (( $# > 0 )); then
