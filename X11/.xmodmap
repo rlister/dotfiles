@@ -4,3 +4,7 @@
 ! clear Mod3
 ! add Mod3 = Hyper_L
 
+!! make capslock control
+remove Lock = Caps_Lock
+keysym Caps_Lock = Control_L
+add Control = Control_L
