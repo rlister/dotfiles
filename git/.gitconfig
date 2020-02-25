@@ -4,6 +4,7 @@
 	excludesfile = /Users/ric/.gitignore_global
 [user]
 	email = rlister@gmail.com
+	name = Richard Lister
 [github]
 	user = rlister
 [pull]
