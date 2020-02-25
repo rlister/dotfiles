@@ -1,6 +1,8 @@
 ## aws-cli cmdline completion
-## pacman installs to this location
-source /usr/bin/aws_zsh_completer.sh
+## aws-cli v1:
+#source /usr/bin/aws_zsh_completer.sh
+## aws-cli v2:
+complete -C aws_completer aws
 
 ## assuming roles with https://github.com/coinbase/assume-role
 source /usr/local/bin/assume-role
