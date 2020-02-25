@@ -13,6 +13,11 @@ alias arr='assume-role ${AWS_ACCOUNT_NAME} ${AWS_ACCOUNT_ROLE}' #  refresh token
 alias ce='aws-vault exec'
 function av() {aws-vault exec $*}
 
+## make it easier to tag docker images
+function acr () {
+  echo -n "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
+}
+
 # ## install sam: pip3 install --user aws-sam-cli
 # export PYTHON3_BASE=$(python3 -m site --user-base)
 # alias sam=${PYTHON3_BASE}/bin/sam
