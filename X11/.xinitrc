@@ -8,6 +8,7 @@ hsetroot -solid black
 #lxpolkit &
 xfsettingsd &
 xfce4-power-manager  # brightness controls
+/usr/lib/xfce4/notifyd/xfce4-notifyd & # notification daemon
 
 ## sane trackball settings
 xinput --set-prop 10 'libinput Accel Profile Enabled' 0, 1
@@ -29,7 +30,6 @@ xrdb ~/.Xresources
 
 ## daemons
 picom &
-dunst &
 unclutter -noevents -root &
 redshift -l 38.83039:-77.19637 &
 
