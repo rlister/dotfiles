@@ -1,8 +1,6 @@
 case $(uname) in
   Linux)
-    if [ -x "$(which dircolors)" ] ; then
-      eval `dircolors ~/.dir_colors`
-    fi
+    eval `dircolors ~/.dir_colors`
     LS='ls --color=tty'
 
     ## Mac-a-like pasteboard commands: pacman -S xsel
@@ -42,12 +40,6 @@ function s() {
     bundle exec stax $*
   )
 }
-
-# function s() {
-#   pushd `git rev-parse --show-toplevel`/ops
-#   bundle exec stax $*
-#   popd
-# }
 
 alias ls="$LS -hF"
 alias sl="$LS -hF"
