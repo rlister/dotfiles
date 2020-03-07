@@ -71,7 +71,6 @@ alias gd='git diff'
 alias gl="git log --branches --pretty='format:%C(blue)%h%Cblue%d%Creset %s %C(green) %an, %ar%Creset'"
 alias gm='git merge'
 alias gp='git push'
-alias gpsu="git push --set-upstream origin $(git symbolic-ref --short HEAD)"
 alias gss='git status -s'
 alias gu='git pull --rebase --autostash' # see https://github.com/aanand/git-up
 # alias gph='git push -u heroku master'
