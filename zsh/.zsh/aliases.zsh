@@ -3,7 +3,7 @@ case $(uname) in
     eval `dircolors ~/.dir_colors`
     LS='ls --color=tty'
 
-    ## Mac-a-like pasteboard commands: pacman -S xsel
+    ## pasteboard commands: pacman -S xsel
     alias pbcopy='xsel --clipboard --input'
     alias pbpaste='xsel --clipboard --output'
     ;;
@@ -45,21 +45,12 @@ alias bu='bundle update'
 
 ## git laziness
 alias gb='git branch'
-alias gca='git commit -a'
-alias gcm='git commit -m'
-alias gcam='git commit -am'
 alias gco='git checkout'
-alias gd='git diff'
 alias gl="git log --branches --pretty='format:%C(blue)%h%Cblue%d%Creset %s %C(green) %an, %ar%Creset'"
 alias gm='git merge'
 alias gp='git push'
-alias gss='git status -s'
 alias gu='git pull --rebase --autostash' # see https://github.com/aanand/git-up
-# alias gph='git push -u heroku master'
-# alias gpo='git push origin master'
 alias sha='git rev-parse HEAD'
-
-alias tf='terraform'
 
 off () { for x in $*; do; mv $x _$x; done }
 on  () { for x in $*; do; mv $x `echo $x|sed -e 's/^_//'`; done }
