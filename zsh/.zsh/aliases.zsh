@@ -61,15 +61,6 @@ alias sha='git rev-parse HEAD'
 
 alias tf='terraform'
 
-## delete local branches that have gone from remote
-function git-prune() {
-  git checkout master
-  git fetch --all -p
-  git branch -vv | grep ": gone]" | awk  '{ print $1 }' | xargs -n 1 git branch -d
-  git checkout -
-}
-
-
 off () { for x in $*; do; mv $x _$x; done }
 on  () { for x in $*; do; mv $x `echo $x|sed -e 's/^_//'`; done }
 
