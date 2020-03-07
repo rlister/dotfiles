@@ -37,3 +37,19 @@ function ppath() {
 function pput() {
   aws ssm put-parameter --name "$1" --value "$2" --type String --overwrite
 }
+
+## run stax from correct location
+function s() {
+  (
+    cd $(git rev-parse --show-toplevel)/ops;
+    bundle exec stax $*
+  )
+}
+
+alias lmi=let-me-in
+
+## aws regions
+alias e1='AWS_REGION=us-east-1'
+alias w1='AWS_REGION=us-west-1'
+alias w2='AWS_REGION=us-west-2'
+alias s1='AWS_REGION=sa-east-1'

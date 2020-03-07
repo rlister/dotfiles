@@ -19,6 +19,12 @@ case $(uname) in
     ;;
 esac
 
+alias ls="$LS -hF"
+alias sl="$LS -hF"
+alias ll="$LS -hFl"
+alias la="$LS -hFla"
+alias lo="$LS -hFltr"
+
 ## redshift will stomp on this
 function brightness() {
   if [ -z "$1" ]; then
@@ -32,22 +38,6 @@ function brightness() {
 alias e="emacsclient -n"
 alias et="emacsclient -t -a '' $*"
 alias ec="emacsclient    -a '' $*"
-
-## run stax from correct location
-function s() {
-  (
-    cd $(git rev-parse --show-toplevel)/ops;
-    bundle exec stax $*
-  )
-}
-
-alias ls="$LS -hF"
-alias sl="$LS -hF"
-alias ll="$LS -hFl"
-alias la="$LS -hFla"
-alias lo="$LS -hFltr"
-
-alias lmi=let-me-in
 
 alias be='bundle exec'
 alias bi='bundle install'
@@ -79,11 +69,6 @@ function git-prune() {
   git checkout -
 }
 
-## aws regions
-alias e1='AWS_REGION=us-east-1'
-alias w1='AWS_REGION=us-west-1'
-alias w2='AWS_REGION=us-west-2'
-alias s1='AWS_REGION=sa-east-1'
 
 off () { for x in $*; do; mv $x _$x; done }
 on  () { for x in $*; do; mv $x `echo $x|sed -e 's/^_//'`; done }
