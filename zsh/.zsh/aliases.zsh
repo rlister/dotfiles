@@ -64,6 +64,10 @@ alias bbcw='mplayer http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-eieuk'
 alias bbcwn='mplayer http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-einws'
 alias bbcj='mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_lrjersey_mf_p'
 
+gcalcol='--color-date=green --color-reader=blue --color-now-marker=yellow'
+alias calh="gcalcli --config-folder ~/.gcalcli/home agenda $gcalcol"
+alias calw="gcalcli --config-folder ~/.gcalcli/work agenda $gcalcol"
+
 ## docker cleanup
 # stopall () {
 #   docker stop $(docker ps -a -q)
