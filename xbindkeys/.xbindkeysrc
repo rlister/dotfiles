@@ -23,3 +23,9 @@
 ## clipboard manager
 "clipmenu"
   Pause
+
+"clipmenu"
+  Mod4 + c
+
+"passmenu"
+  Mod4 + p
