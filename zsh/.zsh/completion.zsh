@@ -1,5 +1,9 @@
 fpath=(~/etc/zsh/completion $fpath)
 autoload -U compinit && compinit
+
+## add bash compatibility (needed for aws and asdf)
+autoload bashcompinit && bashcompinit
+
 # zmodload -i zsh/complist
 
 ## case-insensitive completion
