@@ -41,3 +41,10 @@ export GOPATH=~/code/go
 ## fix scrolling in firefox using libinput2 with gtk3
 ## see https://wiki.archlinux.org/index.php/Firefox/Tweaks#Pixel-perfect_trackpad_scrolling
 export MOZ_USE_XINPUT2=1
+
+## aws-vault
+export AWS_VAULT_BACKEND=pass
+export AWS_VAULT_PROMPT=terminal
+export AWS_VAULT_PASS_PASSWORD_STORE_DIR=~/src/pass
+export AWS_VAULT_PASS_PREFIX=av/
+export AWS_SESSION_TOKEN_TTL=6h
