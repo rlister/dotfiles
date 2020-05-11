@@ -87,3 +87,8 @@ alias calw="gcalcli --config-folder ~/.gcalcli/work agenda $gcalcol"
 # rmiuntagged () {
 #   docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
 # }
+
+alias kc='kubectl'
+alias kx='kubectx'
+alias kn='kubens'
+alias k9='TERM=xterm-256color k9s'
