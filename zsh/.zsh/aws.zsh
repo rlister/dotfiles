@@ -10,8 +10,6 @@ alias ar='assume-role'
 alias arr='assume-role ${AWS_ACCOUNT_NAME} ${AWS_ACCOUNT_ROLE}' #  refresh token
 
 ## switching creds with https://github.com/99designs/aws-vault
-# alias ce='aws-vault exec'
-# function av() {aws-vault exec $*}
 alias av='aws-vault'
 alias ave='aws-vault exec'
 
