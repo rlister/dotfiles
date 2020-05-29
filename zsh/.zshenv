@@ -11,7 +11,7 @@
 
 case $(uname) in
   Linux)
-    PATH="${HOME}/bin:/opt/bin:/opt/ruby/bin:/usr/local/bin:/bin:/usr/bin:/usr/bin/perlbin/core:/usr/X11R6/bin:/usr/games:/usr/sbin:/sbin"
+    PATH="${HOME}/bin:${HOME}/.krew/bin:/usr/local/bin:/usr/bin"
     ## python local pip installs
     PATH=$PATH:$(python -m site --user-base)/bin
     export PATH
