@@ -7,6 +7,7 @@ xfce4-power-manager  # brightness controls
 
 ## xsetroot does not work with compton
 hsetroot -solid black
+
 ## sane trackball settings
 xinput --set-prop 10 'libinput Accel Profile Enabled' 0, 1
 xset r rate 200 25
@@ -29,7 +30,13 @@ xrdb ~/.Xresources
 picom &
 unclutter -noevents -root &
 redshift -l 38.83039:-77.19637 &
-/usr/lib/xfce4/notifyd/xfce4-notifyd & # notification daemon
+## wait for settings daemon before starting things that need it
+until p=$(pidof xfsettingsd) ; do
+  sleep 1
+done
+
+## notification daemon
+/usr/lib/xfce4/notifyd/xfce4-notifyd &
 
 ## window manager
 dwmstatus &
