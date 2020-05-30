@@ -15,7 +15,7 @@ alias ave='aws-vault exec'
 
 ## make it easier to tag docker images
 function acr () {
-  echo -n "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
+  echo -n "${AWS_ACCOUNT_ID:-$(aws sts get-caller-identity --query Account --output text)}.dkr.ecr.${AWS_REGION}.amazonaws.com"
 }
 
 # ## install sam: pip3 install --user aws-sam-cli
