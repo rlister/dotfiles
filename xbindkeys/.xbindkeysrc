@@ -28,9 +28,11 @@
 "passmenu"
   Mod4 + p
 
+## enable trackpad
 "xinput enable 11"
   Mod4 + Delete
 
+## disable trackpad
 "xinput disable 11"
   Mod4 + BackSpace
 
