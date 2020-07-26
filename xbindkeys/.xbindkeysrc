@@ -22,10 +22,7 @@
 
 ## clipboard manager
 "clipmenu"
-  Pause
-
-"clipmenu"
-  Mod4 + c
+  Mod4 + y
 
 ## pass
 "passmenu"
