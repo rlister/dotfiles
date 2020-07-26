@@ -31,6 +31,8 @@ export EDITOR=emacsclient
 # FCEDIT=${EDITOR}
 # export EDITOR VISUAL FCEDIT
 
+export PAGER=less
+
 # export JAVA_HOME=$(/usr/libexec/java_home)
 export GOPATH=~/code/go
 
