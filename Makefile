@@ -1,4 +1,4 @@
-PKGS?=git ls picom redshift rofi ruby ssh themes X11 xbindkeys zsh
+PKGS?=ls picom redshift rofi ruby ssh themes X11 xbindkeys zsh
 DIR?=~
 
 install:
