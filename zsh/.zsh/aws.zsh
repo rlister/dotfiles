@@ -38,6 +38,22 @@ function pput() {
   aws ssm put-parameter --name "$1" --value "$2" --type String --overwrite
 }
 
+function smls() {
+  aws secretsmanager list-secrets --query 'SecretList[*].[Name,LastChangedDate,Description]' --output table
+}
+
+function smcat() {
+  aws secretsmanager get-secret-value --secret-id "$1" --query SecretString --output text
+}
+
+function smcre() {
+  aws secretsmanager create-secret --name "$1" --secret-string "file://$2"
+}
+
+function smput() {
+  aws secretsmanager put-secret-value --secret-id "$1" --secret-string "file://$2"
+}
+
 ## run stax from correct location
 function s() {
   (
