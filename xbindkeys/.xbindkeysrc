@@ -27,3 +27,20 @@
 ## pass
 "passmenu"
   Mod4 + p
+
+## enable trackpad
+"xinput enable 11"
+  Mod4 + Delete
+
+## disable trackpad
+"xinput disable 11"
+  Mod4 + BackSpace
+
+"setxkbmap -option ctrl:swapcaps"
+  Mod4 + Caps_Lock
+
+"flameshot&; flameshot gui -r | xclip -selection clipboard -t image/png; pkill flameshot"
+  Mod4 + Print
+
+"setxkbmap -option ctrl:swapcaps"
+  Mod4 + z
