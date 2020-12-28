@@ -3,7 +3,7 @@
 
 ## settings daemons
 xfsettingsd &
-xfce4-power-manager  # brightness controls
+xfce4-power-manager --daemon  # brightness controls
 
 ## xsetroot does not work with compton
 hsetroot -solid black
