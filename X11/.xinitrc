@@ -38,6 +38,9 @@ done
 ## notification daemon
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
+## clipmenu daemon
+clipmenud &
+
 ## window manager
 dwmstatus &
 exec dwm
