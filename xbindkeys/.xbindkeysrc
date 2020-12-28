@@ -20,12 +20,12 @@
 "slock"
   Scroll_Lock
 
-## clipboard manager
-"clipmenu"
+## clipboard manager https://github.com/cdown/clipmenu/
+"clipmenu -fn 'Roboto Mono-12'"
   Mod4 + y
 
 ## pass
-"passmenu"
+"passmenu -fn 'Roboto Mono-12'"
   Mod4 + p
 
 ## enable trackpad
