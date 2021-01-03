@@ -68,6 +68,9 @@ gcalcol='--color-date=green --color-reader=blue --color-now-marker=yellow'
 alias calh="gcalcli --config-folder ~/.gcalcli/home agenda $gcalcol"
 alias calw="gcalcli --config-folder ~/.gcalcli/work agenda $gcalcol"
 
+## show default branch of repo
+alias ghdef='git remote show origin | grep "HEAD branch"'
+
 ## docker cleanup
 # stopall () {
 #   docker stop $(docker ps -a -q)
