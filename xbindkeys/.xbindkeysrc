@@ -44,6 +44,9 @@
 "setxkbmap -option ctrl:swapcaps"
   Mod4 + Caps_Lock
 
+"xfce4-screenshooter"
+  Print
+
 "flameshot&; flameshot gui -r | xclip -selection clipboard -t image/png; pkill flameshot"
   Mod4 + Print
 
