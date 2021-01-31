@@ -21,6 +21,14 @@
 "clipmenu -fn 'Roboto Mono-12'"
   Mod4 + y
 
+## run commands
+"rofi -show run"
+  Mod4 + space
+
+## list windows
+"rofi -show window"
+  Mod4 + w
+
 ## pass
 "passmenu -fn 'Roboto Mono-12'"
   Mod4 + p
