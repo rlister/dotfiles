@@ -1,6 +1,9 @@
-Emacs.*.font: -pyrs-Roboto Mono-normal-normal-normal-*-15-*-*-*-*-0-iso10646-1
+! Emacs.*.font: -pyrs-Roboto Mono-normal-normal-normal-*-15-*-*-*-*-0-iso10646-1
 
-XTerm.vt100.faceName: xos4 Terminus:size=10:antialias=false
+!! avoid white flash on start
+Emacs*background: Black
+
+XTerm.vt100.faceName: xos4 Terminus:size=12:antialias=false
 
 XTerm*foreground:  	White
 XTerm*cursorColor: 	LimeGreen

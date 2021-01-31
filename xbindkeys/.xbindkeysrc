@@ -1,8 +1,5 @@
 ## -*- conf -*-
 
-"xbindkeys_show"
-  control+shift + q
-
 ## audio controls
 # "pactl set-sink-volume @DEFAULT_SINK@ +1000"
 "volumectl up"
@@ -24,9 +21,17 @@
 "clipmenu -fn 'Roboto Mono-12'"
   Mod4 + y
 
+## run commands
+"rofi -show run"
+  Mod4 + space
+
+## list windows
+"rofi -show window"
+  Mod4 + w
+
 ## pass
 "passmenu -fn 'Roboto Mono-12'"
-  Mod4 + p
+  Mod4 + u
 
 ## enable trackpad
 "xinput enable 11"
@@ -38,6 +43,9 @@
 
 "setxkbmap -option ctrl:swapcaps"
   Mod4 + Caps_Lock
+
+"xfce4-screenshooter"
+  Print
 
 "flameshot&; flameshot gui -r | xclip -selection clipboard -t image/png; pkill flameshot"
   Mod4 + Print
