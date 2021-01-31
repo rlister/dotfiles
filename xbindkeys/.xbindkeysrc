@@ -1,8 +1,5 @@
 ## -*- conf -*-
 
-"xbindkeys_show"
-  control+shift + q
-
 ## audio controls
 # "pactl set-sink-volume @DEFAULT_SINK@ +1000"
 "volumectl up"
