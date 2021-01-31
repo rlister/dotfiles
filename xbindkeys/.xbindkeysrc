@@ -31,7 +31,7 @@
 
 ## pass
 "passmenu -fn 'Roboto Mono-12'"
-  Mod4 + p
+  Mod4 + u
 
 ## enable trackpad
 "xinput enable 11"
