@@ -5,9 +5,9 @@
 complete -C aws_completer aws
 
 ## assuming roles with https://github.com/coinbase/assume-role
-source /usr/local/bin/assume-role
-alias ar='assume-role'
-alias arr='assume-role ${AWS_ACCOUNT_NAME} ${AWS_ACCOUNT_ROLE}' #  refresh token
+#source /usr/local/bin/assume-role
+#alias ar='assume-role'
+#alias arr='assume-role ${AWS_ACCOUNT_NAME} ${AWS_ACCOUNT_ROLE}' #  refresh token
 
 ## switching creds with https://github.com/99designs/aws-vault
 alias av='aws-vault'
