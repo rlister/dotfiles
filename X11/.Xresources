@@ -1,7 +1,49 @@
-! Emacs.*.font: -pyrs-Roboto Mono-normal-normal-normal-*-15-*-*-*-*-0-iso10646-1
+Emacs.font: Roboto Mono:size=15
+Emacs.variable-pitch.attributeFamily: Roboto Mono
 
-!! avoid white flash on start
-Emacs*background: Black
+!! turn off nonsense
+Emacs.cursorBlink: false
+Emacs.menuBar: false
+Emacs.horizontalScrollBars: false
+Emacs.verticalScrollBars: false
+Emacs.toolBar: false
+
+Emacs.background: Black
+Emacs.foreground: azure4
+Emacs.cursorColor: PaleGreen
+
+!! standard faces https://www.gnu.org/software/emacs/manual/html_node/emacs/Standard-Faces.html
+Emacs.underline.attributeUnderline: nil
+Emacs.highlight.attributeBackground: grey10
+Emacs.isearch.attributeForeground: PaleGreen
+Emacs.isearch.attributeBackground: Black
+Emacs.isearch-fail.attributeForeground: IndianRed
+Emacs.isearch-fail.attributeBackground: Black
+Emacs.lazy-highlight.attributeBackground: grey10
+Emacs.lazy-highlight.attributeForeground: DarkGoldenrod
+Emacs.region.attributeBackground: MidnightBlue
+Emacs.secondary-selection.attributeBackground: grey10
+Emacs.mode-line.attributeForeground: aquamarine3
+Emacs.mode-line.attributeBackground: #222222
+Emacs.mode-line.attributeBox: nil
+Emacs.mode-line-inactive.attributeForeground: #857b6f
+Emacs.mode-line-inactive.attributeBackground: #111111
+Emacs.mode-line-inactive.attributeBox: nil
+Emacs.mode-line-inactive.attributeWeight: normal
+Emacs.mode-line-buffer-id.attributeForeground: PaleGreen
+Emacs.minibuffer-prompt.attributeForeground: PaleGreen
+Emacs.fringe.attributeBackground: Black
+Emacs.link.attributeForeground: CornflowerBlue
+Emacs.link.attributeUnderline: false
+
+Emacs.font-lock-comment-face.attributeForeground: grey37
+Emacs.font-lock-keyword-face.attributeForeground: MediumTurquoise
+
+Emacs.show-paren-match.attributeForeground: PaleGreen
+Emacs.show-paren-match.attributeBackground: Black
+Emacs.show-paren-mismatch.attributeForeground: IndianRed
+Emacs.show-paren-mismatch.attributeBackground: Black
+
 
 XTerm.vt100.faceName: xos4 Terminus:size=12:antialias=false
 

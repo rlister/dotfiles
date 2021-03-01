@@ -1,12 +1,15 @@
 ## desktop background
 # ~/.fehbg
 
+## xsetroot does not work with compton
+hsetroot -solid black
+
+## no beeps
+xset b off
+
 ## settings daemons
 xfsettingsd &
 xfce4-power-manager --daemon  # brightness controls
-
-## xsetroot does not work with compton
-hsetroot -solid black
 
 ## sane trackball settings
 xinput --set-prop 10 'libinput Accel Profile Enabled' 0, 1
@@ -30,13 +33,9 @@ xrdb ~/.Xresources
 picom &
 unclutter -noevents -root &
 redshift -l 38.83039:-77.19637 &
-## wait for settings daemon before starting things that need it
-until p=$(pidof xfsettingsd) ; do
-  sleep 1
-done
 
 ## notification daemon
-/usr/lib/xfce4/notifyd/xfce4-notifyd &
+dunst &
 
 ## clipmenu daemon
 clipmenud &

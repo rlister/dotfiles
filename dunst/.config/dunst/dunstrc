@@ -1,6 +1,5 @@
 # -*- mode: conf; -*-
 [global]
-# font = xos4 Terminus 11
 font = Roboto Mono 11
 
 # Allow a small subset of html markup:
@@ -24,7 +23,7 @@ plain_text = no
 #   %I  iconname (without its path)
 #   %p  progress value if set ([  0%] to [100%]) or nothing
 # Markup is allowed
-format = "<b>%s</b>\n%b"
+format = "<b>%s</b> %p\n%b"
 
 # Sort messages by urgency.
 sort = no
@@ -34,7 +33,7 @@ indicate_hidden = yes
 
 # Alignment of message text.
 # Possible values are "left", "center" and "right".
-alignment = center
+alignment = left
 
 # The frequency with wich text that is longer than the notification
 # window allows bounces back and forth.
@@ -58,7 +57,6 @@ ignore_newline = no
 stack_duplicates = yes
 hide_duplicates_count = yes
 
-
 # The geometry of the window:
 #   [{width}]x{height}[+/-{x}+/-{y}]
 # The geometry of the message window.
@@ -72,7 +70,9 @@ hide_duplicates_count = yes
 # The width can be negative.  In this case the actual width is the
 # screen width minus the width defined in within the geometry option.
 #geometry = "250x50-40+40"
-geometry = "300x50-15+49"
+geometry = "600x50-15+49"
+
+progress_bar = off
 
 # Shrink window if it's smaller than the width.  Will be ignored if
 # width is 0.
@@ -147,58 +147,57 @@ startup_notification = false
 dmenu = /usr/bin/dmenu -p dunst:
 
 # Browser for opening urls in context menu.
-browser = /usr/bin/firefox -new-tab
+browser = /usr/bin/firefox-nightly -new-tab
 
 # Align icons left/right/off
 icon_position = off
 max_icon_size = 80
 
-# Paths to default icons.
-icon_path = /usr/share/icons/Paper/16x16/mimetypes/:/usr/share/icons/Paper/48x48/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/48x48/notifications/:/usr/share/icons/Paper/48x48/emblems/
+## do not use icons, but having a valid path prevents warnings
+icon_path = /usr/share/icons/Adwaita/22x22/legacy/:/usr/share/icons/Adwaita/16x16/legacy/:/usr/share/icons/Adwaita/16x16/status/
 
 frame_width = 3
 frame_color = "#8EC07C"
 
 [shortcuts]
-
 # Shortcuts are specified as [modifier+][modifier+]...key
 # Available modifiers are "ctrl", "mod1" (the alt-key), "mod2",
 # "mod3" and "mod4" (windows-key).
 # Xev might be helpful to find names for keys.
 
 # Close notification.
-close = ctrl+space
+close = mod4+minus
 
 # Close all notifications.
-close_all = ctrl+shift+space
+close_all = mod4+shift+minus
 
 # Redisplay last message(s).
 # On the US keyboard layout "grave" is normally above TAB and left
 # of "1".
-history = ctrl+grave
+history = mod4+backslash
 
 # Context menu.
-context = ctrl+shift+period
+# context = mod4+period
 
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#3B7C87"
-foreground = "#3B7C87"
+frame_color = "#4169e1"
+foreground = "#4169e1" # #3B7C87
 background = "#191311"
 #background = "#2B313C"
 timeout = 4
 
 [urgency_normal]
-frame_color = "#5B8234"
-foreground = "#5B8234"
+frame_color = "#98fb98"
+foreground = "#98fb98"
 background = "#191311"
 #background = "#2B313C"
-timeout = 6
+timeout = 10
 
 [urgency_critical]
-frame_color = "#B7472A"
-foreground = "#B7472A"
+frame_color = "#cd5c5c" #"#B7472A"
+foreground = "#cd5c5c" #"#B7472A"
 background = "#191311"
 #background = "#2B313C"
 timeout = 8
