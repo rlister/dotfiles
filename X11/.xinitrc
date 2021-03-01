@@ -33,13 +33,9 @@ xrdb ~/.Xresources
 picom &
 unclutter -noevents -root &
 redshift -l 38.83039:-77.19637 &
-## wait for settings daemon before starting things that need it
-until p=$(pidof xfsettingsd) ; do
-  sleep 1
-done
 
 ## notification daemon
-/usr/lib/xfce4/notifyd/xfce4-notifyd &
+dunst &
 
 ## clipmenu daemon
 clipmenud &

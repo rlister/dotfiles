@@ -1,16 +1,12 @@
 ## -*- conf -*-
 
-## audio controls
-# "pactl set-sink-volume @DEFAULT_SINK@ +1000"
-"volumectl up"
+"vol up"
   XF86AudioRaiseVolume
 
-# "pactl set-sink-volume @DEFAULT_SINK@ -1000"
-"volumectl down"
+"vol down"
   XF86AudioLowerVolume
 
-# "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-"volumectl toggle"
+"vol toggle"
   XF86AudioMute
 
 ## lock screen
@@ -52,3 +48,9 @@
 
 "setxkbmap -option ctrl:swapcaps"
   Mod4 + z
+
+# "dunstctl close"
+#   Mod4 + minus
+
+# "dunstctl history-pop"
+#   Mod4 + backslash
