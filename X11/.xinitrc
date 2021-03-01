@@ -1,12 +1,15 @@
 ## desktop background
 # ~/.fehbg
 
+## xsetroot does not work with compton
+hsetroot -solid black
+
+## no beeps
+xset b off
+
 ## settings daemons
 xfsettingsd &
 xfce4-power-manager --daemon  # brightness controls
-
-## xsetroot does not work with compton
-hsetroot -solid black
 
 ## sane trackball settings
 xinput --set-prop 10 'libinput Accel Profile Enabled' 0, 1
