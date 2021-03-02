@@ -13,7 +13,7 @@ Emacs.foreground: azure4
 Emacs.cursorColor: PaleGreen
 
 !! standard faces https://www.gnu.org/software/emacs/manual/html_node/emacs/Standard-Faces.html
-Emacs.underline.attributeUnderline: nil
+Emacs.underline.attributeUnderline: false
 Emacs.highlight.attributeBackground: grey10
 Emacs.isearch.attributeForeground: PaleGreen
 Emacs.isearch.attributeBackground: Black
@@ -38,11 +38,37 @@ Emacs.link.attributeUnderline: false
 
 Emacs.font-lock-comment-face.attributeForeground: grey37
 Emacs.font-lock-keyword-face.attributeForeground: MediumTurquoise
+Emacs.font-lock-string-face.attributeForeground: SteelBlue
+Emacs.font-lock-variable-name-face.attributeForeground: LightSlateBlue
 
 Emacs.show-paren-match.attributeForeground: PaleGreen
 Emacs.show-paren-match.attributeBackground: Black
 Emacs.show-paren-mismatch.attributeForeground: IndianRed
 Emacs.show-paren-mismatch.attributeBackground: Black
+
+Emacs.org-todo.attributeForeground: IndianRed
+Emacs.org-done.attributeForeground: grey37
+Emacs.org-done.attributeStrikethrough: true
+Emacs.org-headline-done.attributeForeground: grey37
+Emacs.org-headline-done.attributeStrikethrough: true
+Emacs.org-scheduled-previously.attributeForeground: CornflowerBlue
+
+Emacs.vterm-color-black.attributeForeground: SlateGrey
+! Background LightSlateGrey
+Emacs.vterm-color-red.attributeForeground: IndianRed
+! Background IndianRed1
+Emacs.vterm-color-green.attributeForeground: PaleGreen
+! Background PaleGreen1
+Emacs.vterm-color-yellow.attributeForeground: PaleGoldenrod
+! Background LightGoldenrod
+Emacs.vterm-color-blue.attributeForeground: DodgerBlue
+! Background DodgerBlue1
+Emacs.vterm-color-magenta.attributeForeground: #B5A0FF
+! Background MediumPurple1
+Emacs.vterm-color-cyan.attributeForeground: cyan3
+! Background cyan1
+Emacs.vterm-color-white.attributeForeground: azure4
+! Background azure1
 
 
 XTerm.vt100.faceName: xos4 Terminus:size=12:antialias=false
