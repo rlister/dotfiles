@@ -31,4 +31,5 @@ stow -t ~ xbindkeys
 stow -t ~ X11
 stow -t ~ dunst
 stow -t ~ themes
+stow -t ~ termite
 ```
