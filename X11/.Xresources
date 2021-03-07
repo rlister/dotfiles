@@ -1,5 +1,4 @@
 Emacs.font: Roboto Mono:size=15
-Emacs.variable-pitch.attributeFamily: Roboto Mono
 
 !! turn off nonsense
 Emacs.cursorBlink: false
@@ -9,20 +8,33 @@ Emacs.verticalScrollBars: false
 Emacs.toolBar: false
 
 Emacs.background: Black
-Emacs.foreground: azure4
-Emacs.cursorColor: PaleGreen
+!Emacs.foreground: azure4
+!Emacs.cursorColor: PaleGreen
 
 !! standard faces https://www.gnu.org/software/emacs/manual/html_node/emacs/Standard-Faces.html
+Emacs.default.attributeForeground: azure4
+Emacs.italic.attributeUnderline: false
+Emacs.italic.attributeFamily: Roboto Mono-Italic
 Emacs.underline.attributeUnderline: false
+Emacs.fixed-pitch.attributeFamily: Roboto Mono
+Emacs.fixed-pitch-serif.attributeFamily: Roboto Mono
+Emacs.variable-pitch.attributeFamily: Roboto Mono
+Emacs.shadow.attributeForeground: DarkSlateGray4
+
+!! highlights
 Emacs.highlight.attributeBackground: grey10
 Emacs.isearch.attributeForeground: PaleGreen
 Emacs.isearch.attributeBackground: Black
 Emacs.isearch-fail.attributeForeground: IndianRed
 Emacs.isearch-fail.attributeBackground: Black
+Emacs.query-replace.attributeForeground: PaleGreen
 Emacs.lazy-highlight.attributeBackground: grey10
 Emacs.lazy-highlight.attributeForeground: DarkGoldenrod
 Emacs.region.attributeBackground: MidnightBlue
-Emacs.secondary-selection.attributeBackground: grey10
+Emacs.secondary-selection.attributeBackground: grey15
+Emacs.trailing-whitespace.attributeBackground: IndianRed4
+
+!! mode-line
 Emacs.mode-line.attributeForeground: aquamarine3
 Emacs.mode-line.attributeBackground: #222222
 Emacs.mode-line.attributeBox: nil
@@ -31,45 +43,61 @@ Emacs.mode-line-inactive.attributeBackground: #111111
 Emacs.mode-line-inactive.attributeBox: nil
 Emacs.mode-line-inactive.attributeWeight: normal
 Emacs.mode-line-buffer-id.attributeForeground: PaleGreen
+Emacs.mode-line-highlight.attributeBox: nil
+Emacs.mode-line-highlight.attributeForeground: Cyan
+
+!! other parts of frame
+Emacs.header-line.attributeForeground: MediumAquamarine
+Emacs.header-line.attributeBackground: grey10
 Emacs.minibuffer-prompt.attributeForeground: PaleGreen
 Emacs.fringe.attributeBackground: Black
+Emacs.cursor.attributeBackground: PaleGreen
+
 Emacs.link.attributeForeground: CornflowerBlue
 Emacs.link.attributeUnderline: false
 
-Emacs.font-lock-comment-face.attributeForeground: grey37
-Emacs.font-lock-keyword-face.attributeForeground: MediumTurquoise
-Emacs.font-lock-string-face.attributeForeground: SteelBlue
-Emacs.font-lock-variable-name-face.attributeForeground: LightSlateBlue
+!! inherit from these
+Emacs.success.attributeForeground: PaleGreen
+Emacs.warning.attributeForeground: PaleGoldenrod
+Emacs.error.attributeForeground: IndianRed
+Emacs.match.attributeForeground: RosyBrown
 
-Emacs.show-paren-match.attributeForeground: PaleGreen
-Emacs.show-paren-match.attributeBackground: Black
-Emacs.show-paren-mismatch.attributeForeground: IndianRed
-Emacs.show-paren-mismatch.attributeBackground: Black
+! Emacs.font-lock-comment-face.attributeForeground: grey37
+! Emacs.font-lock-keyword-face.attributeForeground: MediumTurquoise
+! Emacs.font-lock-string-face.attributeForeground: SteelBlue
+! Emacs.font-lock-variable-name-face.attributeForeground: LightSlateBlue
 
-Emacs.org-todo.attributeForeground: IndianRed
-Emacs.org-done.attributeForeground: grey37
-Emacs.org-done.attributeStrikethrough: true
-Emacs.org-headline-done.attributeForeground: grey37
-Emacs.org-headline-done.attributeStrikethrough: true
-Emacs.org-scheduled-previously.attributeForeground: CornflowerBlue
+! Emacs.show-paren-match.attributeForeground: PaleGreen
+! Emacs.show-paren-match.attributeBackground: Black
+! Emacs.show-paren-mismatch.attributeForeground: IndianRed
+! Emacs.show-paren-mismatch.attributeBackground: Black
 
-Emacs.vterm-color-black.attributeForeground: SlateGrey
-! Background LightSlateGrey
-Emacs.vterm-color-red.attributeForeground: IndianRed
-! Background IndianRed1
-Emacs.vterm-color-green.attributeForeground: PaleGreen
-! Background PaleGreen1
-Emacs.vterm-color-yellow.attributeForeground: PaleGoldenrod
-! Background LightGoldenrod
-Emacs.vterm-color-blue.attributeForeground: DodgerBlue
-! Background DodgerBlue1
-Emacs.vterm-color-magenta.attributeForeground: #B5A0FF
-! Background MediumPurple1
-Emacs.vterm-color-cyan.attributeForeground: cyan3
-! Background cyan1
-Emacs.vterm-color-white.attributeForeground: azure4
-! Background azure1
+! Emacs.org-todo.attributeForeground: IndianRed
+! Emacs.org-done.attributeForeground: grey37
+! Emacs.org-done.attributeStrikethrough: true
+! Emacs.org-headline-done.attributeForeground: grey37
+! Emacs.org-headline-done.attributeStrikethrough: true
+! Emacs.org-scheduled-previously.attributeForeground: CornflowerBlue
 
+! Emacs.vterm-color-black.attributeForeground: SlateGrey
+! ! Background LightSlateGrey
+! Emacs.vterm-color-red.attributeForeground: IndianRed
+! ! Background IndianRed1
+! Emacs.vterm-color-green.attributeForeground: PaleGreen
+! ! Background PaleGreen1
+! Emacs.vterm-color-yellow.attributeForeground: PaleGoldenrod
+! ! Background LightGoldenrod
+! Emacs.vterm-color-blue.attributeForeground: DodgerBlue
+! ! Background DodgerBlue1
+! Emacs.vterm-color-magenta.attributeForeground: #B5A0FF
+! ! Background MediumPurple1
+! Emacs.vterm-color-cyan.attributeForeground: cyan3
+! ! Background cyan1
+! Emacs.vterm-color-white.attributeForeground: azure4
+! ! Background azure1
+
+! Emacs.mew-face-header-*.attributeForeground: grey
+! Emacs.mew-face-header-*.attributeBold: false
 
 XTerm.vt100.faceName: xos4 Terminus:size=12:antialias=false
 
@@ -117,3 +145,5 @@ XTerm*VT100*color12: #B5A0FF
 XTerm*VT100*color13: Gray
 XTerm*VT100*color14: Cyan
 XTerm*VT100*color15: White
+
+xscreensaver.passwd.passwdFont:         -*-terminus-medium-r-*-*-18-*-*-*-*-*-*-*
