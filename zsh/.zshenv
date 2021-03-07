@@ -56,3 +56,6 @@ export AWS_ASSUME_ROLE_TTL=12h
 export AWS_FEDERATION_TOKEN_TTL=12h
 ## needed for pinentry-tty when aws-vault writes sessions to pass
 export GPG_TTY=$(tty)
+
+## need this for qt5 to read qt5ct config file
+export QT_QPA_PLATFORMTHEME=qt5ct
