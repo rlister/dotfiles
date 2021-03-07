@@ -10,7 +10,8 @@
   XF86AudioMute
 
 ## lock screen
-"slock"
+# "slock"
+"xscreensaver-command -lock"
   Scroll_Lock
 
 ## clipboard manager https://github.com/cdown/clipmenu/
