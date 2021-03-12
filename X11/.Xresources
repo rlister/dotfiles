@@ -99,14 +99,34 @@ Emacs.match.attributeForeground: RosyBrown
 ! Emacs.mew-face-header-*.attributeForeground: grey
 ! Emacs.mew-face-header-*.attributeBold: false
 
-XTerm.vt100.faceName: xos4 Terminus:size=12:antialias=false
+!! needed to render menus
+!XTerm*font: -misc-fixed-medium-r-semicondensed--0-0-75-75-c-0-iso8859-1
+XTerm*font: -*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-1
+
+!! default to truetype font
+xTerm.VT100.renderFont: true
+
+! ! XTerm.vt100.faceName: xos4 Terminus:size=14:antialias=false
+XTerm*faceName: Roboto Mono:size=12:antialias=false
+! ! VT Font Menu: Unreadable
+xterm*faceSize1: 8
+! ! VT font menu: Tiny
+xterm*faceSize2: 10
+! ! VT font menu: Medium
+xterm*faceSize3: 12
+! ! VT font menu: Large
+xterm*faceSize4: 16
+! ! VT font menu: Huge
+xterm*faceSize5: 22
+
+
 
 XTerm*foreground:  	White
-XTerm*cursorColor: 	LimeGreen
+XTerm*cursorColor: 	PaleGreen
 XTerm.vt100.background:	Black
 XTerm.vt100.foreground:	azure4
 XTerm*vt100*highlightColor: MidnightBlue
-XTerm.vt100.locale:     true
+XTerm.vt100.locale: true
 
 !! menu colors
 XTerm*mainMenu*background: DodgerBlue4
@@ -120,7 +140,7 @@ XTerm.vt100.metaSendsEscape: true
 XTerm.vt100.saveLines: 4096
 
 !! just no
-XTerm*ScrollBar:	    off
+XTerm*ScrollBar: off
 XTerm*vt100*rightScrollBar: True
 XTerm*Scrollbar*foreground: DodgerBlue4
 XTerm*Scrollbar*background: Black
@@ -130,20 +150,25 @@ XTerm*colorMode:    True
 XTerm*dynamicColor: On
 
 XTerm*VT100*color0:  Black
-XTerm*VT100*color1:  Red
-XTerm*VT100*color2:  Green
-XTerm*VT100*color3:  Yellow
+XTerm*VT100*color1:  IndianRed
+XTerm*VT100*color2:  PaleGreen
+XTerm*VT100*color3:  DarkGoldenrod
 XTerm*VT100*color4:  #B5A0FF
 XTerm*VT100*color5:  Gray
-XTerm*VT100*color6:  Cyan
+XTerm*VT100*color6:  CornflowerBlue
 XTerm*VT100*color7:  White
 XTerm*VT100*color8:  Black
-XTerm*VT100*color9:  Red
-XTerm*VT100*color10: Green
-XTerm*VT100*color11: Yellow
-XTerm*VT100*color12: #B5A0FF
-XTerm*VT100*color13: Gray
-XTerm*VT100*color14: Cyan
-XTerm*VT100*color15: White
 
 xscreensaver.passwd.passwdFont:         -*-terminus-medium-r-*-*-18-*-*-*-*-*-*-*
+! XTerm*VT100*color9:  Red
+! XTerm*VT100*color10: Green
+! XTerm*VT100*color11: Yellow
+! XTerm*VT100*color12: #B5A0FF
+! XTerm*VT100*color13: Gray
+! XTerm*VT100*color14: Cyan
+! XTerm*VT100*color15: White
+
+XTerm*translations: #override \
+  Ctrl <Key> minus: smaller-vt-font() \n\
+  Ctrl <Key> plus: larger-vt-font() \n\
+  Ctrl <Key> 0: set-vt-font(d)

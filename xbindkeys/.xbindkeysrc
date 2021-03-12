@@ -27,8 +27,16 @@
   Mod4 + w
 
 ## pass
-"passmenu -fn 'Roboto Mono-12'"
+# "passmenu -fn 'Roboto Mono-12'"
+#   Mod4 + u
+
+## pass
+"passrofi"
   Mod4 + u
+
+## pass username
+"LINE=2 passrofi"
+  Mod4 + Shift + u
 
 ## enable trackpad
 "xinput enable 11"
