@@ -30,16 +30,15 @@
   Mod4 + w
 
 ## pass
-# "passmenu -fn 'Roboto Mono-12'"
-#   Mod4 + u
-
-## pass
-"passrofi"
+"passmenu -fn 'xos4 Terminus:size=12'"
   Mod4 + u
 
 ## pass username
-"LINE=2 passrofi"
+"LINE=2 passmenu -fn 'xos4 Terminus:size=12'"
   Mod4 + Shift + u
+
+# "LINE=2 passrofi"
+#   Mod4 + Shift + u
 
 ## enable trackpad
 "xinput enable 11"
