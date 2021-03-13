@@ -55,7 +55,7 @@ config.bind('u', 'scroll-page 0 -0.5')
 
 ## buffers/tabs
 config.bind('<ctrl-t>', 'set-cmd-text -s :tab-select')
-config.bind('<ctrl-x>b', 'set-cmd-text -s :buffer')
+config.bind('<ctrl-x>b', 'set-cmd-text -s :tab-select')
 config.bind('<ctrl-i>', 'set-cmd-text -s :open')
 config.bind('<ctrl-Down>', 'tab-next')
 config.bind('<ctrl-Up>', 'tab-prev')
@@ -72,7 +72,7 @@ config.bind('<ctrl-h><ctrl-h>', 'set-cmd-text -s :help')
 
 ## page color scheme
 c.colors.webpage.darkmode.enabled = True
-c.colors.webpage.prefers_color_scheme_dark = True
+c.colors.webpage.preferred_color_scheme = 'dark'
 
 ## ui colors
 c.colors.webpage.bg = 'Black'
