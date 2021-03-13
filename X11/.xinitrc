@@ -30,6 +30,7 @@ redshift &
 dunst &
 clipmenud &
 dwmstatus &
+xscreensaver &
 
 ## window manager
 exec dwm
