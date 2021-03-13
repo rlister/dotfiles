@@ -45,13 +45,13 @@ XTerm.ttyModes: erase ^?
 XTerm*font: -xos4-terminus-medium-r-normal--14-*-*-*-*-*-iso10646-1
 
 !! scaled bitmap sizes
-XTerm.vt100.font1: -xos4-terminus-medium-r-normal--10-*-*-*-*-*-iso10646-1  !unreadable
-XTerm.vt100.font2: -xos4-terminus-medium-r-normal--12-*-*-*-*-*-iso10646-1  !tiny
-XTerm.vt100.font3: -xos4-terminus-medium-r-normal--14-*-*-*-*-*-iso10646-1  !small
-XTerm.vt100.font4: -xos4-terminus-medium-r-normal--16-*-*-*-*-*-iso10646-1  !medium
-XTerm.vt100.font5: -xos4-terminus-medium-r-normal--18-*-*-*-*-*-iso10646-1  !large
-XTerm.vt100.font6: -xos4-terminus-medium-r-normal--20-*-*-*-*-*-iso10646-1  !huge
-XTerm.vt100.font7: -xos4-terminus-medium-r-normal--22-*-*-*-*-*-iso10646-1  !enormous
+XTerm.vt100.font1: -xos4-terminus-medium-r-normal--10-*-*-*-*-*-iso10646-1
+XTerm.vt100.font2: -xos4-terminus-medium-r-normal--12-*-*-*-*-*-iso10646-1
+XTerm.vt100.font3: -xos4-terminus-medium-r-normal--14-*-*-*-*-*-iso10646-1
+XTerm.vt100.font4: -xos4-terminus-medium-r-normal--16-*-*-*-*-*-iso10646-1
+XTerm.vt100.font5: -xos4-terminus-medium-r-normal--18-*-*-*-*-*-iso10646-1
+XTerm.vt100.font6: -xos4-terminus-medium-r-normal--20-*-*-*-*-*-iso10646-1
+XTerm.vt100.font7: -xos4-terminus-medium-r-normal--22-*-*-*-*-*-iso10646-1
 
 !! do not use bold or overstrike, can toggle in font menu
 XTerm*allowBoldFonts: false
