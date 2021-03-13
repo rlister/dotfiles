@@ -2,7 +2,7 @@ config.load_autoconfig()
 
 #c.zoom.default = '125%'
 
-c.url.searchengines = { "DEFAULT": "https://html.duckduckgo.com/html?q={}" }
+c.url.searchengines = { "DEFAULT": "https://duckduckgo.com/?q={}" }
 
 ## external editor for ctrl-e
 c.editor.command = [ 'emacsclient', '-c', '{}' ]
