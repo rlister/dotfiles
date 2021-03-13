@@ -26,9 +26,9 @@ xrdb ~/.Xresources
 ## daemons
 picom &
 unclutter -noevents -root &
-redshift -l 38.83039:-77.19637 &
 
 ## notification daemon
+redshift &
 dunst &
 
 ## clipmenu daemon
