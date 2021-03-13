@@ -1,66 +1,35 @@
+!! font may vary by display
 Emacs.font: Roboto Mono:size=15
+! Emacs.italic.attributeFamily: Roboto Mono-Italic
+! Emacs.fixed-pitch.attributeFamily: Roboto Mono
+! Emacs.fixed-pitch-serif.attributeFamily: Roboto Mono
+! Emacs.variable-pitch.attributeFamily: Roboto Mono
 
-!! turn off nonsense
+!! remove ui elements to speed startup
 Emacs.cursorBlink: false
 Emacs.menuBar: false
+Emacs.toolBar: false
 Emacs.horizontalScrollBars: false
 Emacs.verticalScrollBars: false
-Emacs.toolBar: false
 
+!! set up basics for use before theme is lazy-loaded
 Emacs.background: Black
-!Emacs.foreground: azure4
-!Emacs.cursorColor: PaleGreen
-
-!! standard faces https://www.gnu.org/software/emacs/manual/html_node/emacs/Standard-Faces.html
-Emacs.default.attributeForeground: azure4
-Emacs.italic.attributeUnderline: false
-Emacs.italic.attributeFamily: Roboto Mono-Italic
-Emacs.underline.attributeUnderline: false
-Emacs.fixed-pitch.attributeFamily: Roboto Mono
-Emacs.fixed-pitch-serif.attributeFamily: Roboto Mono
-Emacs.variable-pitch.attributeFamily: Roboto Mono
-Emacs.shadow.attributeForeground: DarkSlateGray4
-
-!! highlights
-Emacs.highlight.attributeBackground: grey10
-Emacs.isearch.attributeForeground: PaleGreen
-Emacs.isearch.attributeBackground: Black
-Emacs.isearch-fail.attributeForeground: IndianRed
-Emacs.isearch-fail.attributeBackground: Black
-Emacs.query-replace.attributeForeground: PaleGreen
-Emacs.lazy-highlight.attributeBackground: grey10
-Emacs.lazy-highlight.attributeForeground: DarkGoldenrod
-Emacs.region.attributeBackground: MidnightBlue
-Emacs.secondary-selection.attributeBackground: grey15
-Emacs.trailing-whitespace.attributeBackground: IndianRed4
+Emacs.foreground: azure4
+Emacs.cursorColor: PaleGreen
 
 !! mode-line
 Emacs.mode-line.attributeForeground: aquamarine3
-Emacs.mode-line.attributeBackground: #222222
+Emacs.mode-line.attributeBackground: grey14
 Emacs.mode-line.attributeBox: nil
-Emacs.mode-line-inactive.attributeForeground: #857b6f
-Emacs.mode-line-inactive.attributeBackground: #111111
+
+Emacs.mode-line-inactive.attributeForeground: grey50
+Emacs.mode-line-inactive.attributeBackground: grey7
 Emacs.mode-line-inactive.attributeBox: nil
 Emacs.mode-line-inactive.attributeWeight: normal
+
 Emacs.mode-line-buffer-id.attributeForeground: PaleGreen
 Emacs.mode-line-highlight.attributeBox: nil
 Emacs.mode-line-highlight.attributeForeground: Cyan
-
-!! other parts of frame
-Emacs.header-line.attributeForeground: MediumAquamarine
-Emacs.header-line.attributeBackground: grey10
-Emacs.minibuffer-prompt.attributeForeground: PaleGreen
-Emacs.fringe.attributeBackground: Black
-Emacs.cursor.attributeBackground: PaleGreen
-
-Emacs.link.attributeForeground: CornflowerBlue
-Emacs.link.attributeUnderline: false
-
-!! inherit from these
-Emacs.success.attributeForeground: PaleGreen
-Emacs.warning.attributeForeground: PaleGoldenrod
-Emacs.error.attributeForeground: IndianRed
-Emacs.match.attributeForeground: RosyBrown
 
 !! arch xterm defaults to xterm, but has 256color support
 XTerm.termName: xterm-256color
