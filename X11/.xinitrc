@@ -1,6 +1,3 @@
-## desktop background
-# ~/.fehbg
-
 ## xsetroot does not work with compton
 hsetroot -solid black
 
@@ -19,9 +16,6 @@ xset r rate 200 25
 
 ## set my keyboard model
 setxkbmap -model kinesis
-
-## map modifiers eg menu to hyper
-xmodmap ~/.xmodmap
 
 ## bind media keys etc
 xbindkeys
