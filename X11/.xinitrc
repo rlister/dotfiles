@@ -20,20 +20,16 @@ setxkbmap -model kinesis
 ## bind media keys etc
 xbindkeys
 
-## xterm settings
+## xorg settings
 xrdb ~/.Xresources
 
 ## daemons
 picom &
 unclutter -noevents -root &
-
-## notification daemon
 redshift &
 dunst &
-
-## clipmenu daemon
 clipmenud &
+dwmstatus &
 
 ## window manager
-dwmstatus &
 exec dwm
