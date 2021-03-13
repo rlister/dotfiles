@@ -31,6 +31,7 @@ dunst &
 clipmenud &
 dwmstatus &
 xscreensaver &
+emacs -bg-daemon
 
 ## window manager
 exec dwm
