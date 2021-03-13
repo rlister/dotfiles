@@ -62,34 +62,50 @@ Emacs.warning.attributeForeground: PaleGoldenrod
 Emacs.error.attributeForeground: IndianRed
 Emacs.match.attributeForeground: RosyBrown
 
-!! needed to render menus
-!XTerm*font: -misc-fixed-medium-r-semicondensed--0-0-75-75-c-0-iso8859-1
-XTerm*font: -*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-1
+!! arch xterm defaults to xterm, but has 256color support
+XTerm.termName: xterm-256color
 
-!! default to truetype font
-xTerm.VT100.renderFont: true
-
-! ! XTerm.vt100.faceName: xos4 Terminus:size=14:antialias=false
-XTerm*faceName: Roboto Mono:size=12:antialias=false
-! ! VT Font Menu: Unreadable
-xterm*faceSize1: 8
-! ! VT font menu: Tiny
-xterm*faceSize2: 10
-! ! VT font menu: Medium
-xterm*faceSize3: 12
-! ! VT font menu: Large
-xterm*faceSize4: 16
-! ! VT font menu: Huge
-xterm*faceSize5: 22
-
-
-
-XTerm*foreground:  	White
-XTerm*cursorColor: 	PaleGreen
-XTerm.vt100.background:	Black
-XTerm.vt100.foreground:	azure4
-XTerm*vt100*highlightColor: MidnightBlue
+!! set utf8 from system
 XTerm.vt100.locale: true
+
+!! default bitmap font for vt100 and menus
+XTerm*font: -xos4-terminus-medium-r-normal--14-*-*-*-*-*-iso10646-1
+
+!! scaled bitmap sizes
+XTerm.vt100.font1: -xos4-terminus-medium-r-normal--10-*-*-*-*-*-iso10646-1  !unreadable
+XTerm.vt100.font2: -xos4-terminus-medium-r-normal--12-*-*-*-*-*-iso10646-1  !tiny
+XTerm.vt100.font3: -xos4-terminus-medium-r-normal--14-*-*-*-*-*-iso10646-1  !small
+XTerm.vt100.font4: -xos4-terminus-medium-r-normal--16-*-*-*-*-*-iso10646-1  !medium
+XTerm.vt100.font5: -xos4-terminus-medium-r-normal--18-*-*-*-*-*-iso10646-1  !large
+XTerm.vt100.font6: -xos4-terminus-medium-r-normal--20-*-*-*-*-*-iso10646-1  !huge
+XTerm.vt100.font7: -xos4-terminus-medium-r-normal--22-*-*-*-*-*-iso10646-1  !enormous
+
+!! do not use bold or overstrike, can toggle in font menu
+XTerm*allowBoldFonts: false
+
+!! default to bitmap font
+XTerm.vt100.renderFont: false
+
+!! truetype font to use if renderFont true
+XTerm*faceName: Roboto Mono:size=12:antialias=true
+
+!! scaled sizes for truetype font
+XTerm*faceSize1: 8              !unreadable
+XTerm*faceSize2: 10             !tiny
+XTerm*faceSize3: 12             !small
+XTerm*faceSize4: 14             !medium
+XTerm*faceSize5: 16             !large
+XTerm*faceSize6: 18             !huge
+XTerm*faceSize7: 20             !enormous
+
+!! default colors
+XTerm*foreground: White
+XTerm*cursorColor: 	PaleGreen
+
+!! vt100 terminal colors
+XTerm.vt100.foreground:	azure4
+XTerm.vt100.background:	Black
+XTerm.vt100.highlightColor: MidnightBlue
 
 !! menu colors
 XTerm*mainMenu*background: DodgerBlue4
@@ -112,26 +128,26 @@ XTerm*Scrollbar*background: Black
 XTerm*colorMode:    True
 XTerm*dynamicColor: On
 
+!! ansi foreground colors
 XTerm*VT100*color0:  Black
 XTerm*VT100*color1:  IndianRed
 XTerm*VT100*color2:  PaleGreen
 XTerm*VT100*color3:  DarkGoldenrod
-XTerm*VT100*color4:  #B5A0FF
-XTerm*VT100*color5:  Gray
-XTerm*VT100*color6:  CornflowerBlue
-XTerm*VT100*color7:  White
+XTerm*VT100*color4:  CornflowerBlue
+XTerm*VT100*color5:  #B5A0FF    !magenta
+XTerm*VT100*color6:  SkyBlue
+XTerm*VT100*color7:  azure4     !grey
 XTerm*VT100*color8:  Black
 
-xscreensaver.passwd.passwdFont:         -*-terminus-medium-r-*-*-18-*-*-*-*-*-*-*
-! XTerm*VT100*color9:  Red
-! XTerm*VT100*color10: Green
-! XTerm*VT100*color11: Yellow
-! XTerm*VT100*color12: #B5A0FF
-! XTerm*VT100*color13: Gray
-! XTerm*VT100*color14: Cyan
-! XTerm*VT100*color15: White
+!! bright colors
+XTerm*VT100*color9:  IndianRed1
+XTerm*VT100*color10: PaleGreen1
+XTerm*VT100*color11: DarkGoldenrod1
+XTerm*VT100*color12: MediumPurple1
+XTerm*VT100*color13: Gray
+XTerm*VT100*color14: SkyBlue1
+XTerm*VT100*color15: DarkGrey
 
-XTerm*translations: #override \
   Ctrl <Key> minus: smaller-vt-font() \n\
   Ctrl <Key> plus: larger-vt-font() \n\
   Ctrl <Key> 0: set-vt-font(d)
