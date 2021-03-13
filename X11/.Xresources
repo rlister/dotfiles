@@ -118,11 +118,11 @@ XTerm.vt100.metaSendsEscape: true
 !! default scrollback is 1024
 XTerm.vt100.saveLines: 4096
 
-!! just no
+!! turn off scrollbar
 XTerm*ScrollBar: off
-XTerm*vt100*rightScrollBar: True
-XTerm*Scrollbar*foreground: DodgerBlue4
-XTerm*Scrollbar*background: Black
+! XTerm*vt100*rightScrollBar: True
+! XTerm*Scrollbar*foreground: DodgerBlue4
+! XTerm*Scrollbar*background: Black
 
 !! ansi colors
 XTerm*colorMode:    True
