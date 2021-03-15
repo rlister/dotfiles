@@ -23,6 +23,9 @@
   Mod4 + r
 
 "emacsclient -c"
+  Mod4 + equal
+
+"rofi -show run"
   Mod4 + space
 
 ## list windows
