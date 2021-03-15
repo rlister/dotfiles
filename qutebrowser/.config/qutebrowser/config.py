@@ -8,7 +8,7 @@ c.url.searchengines = { "DEFAULT": "https://duckduckgo.com/?q={}" }
 c.editor.command = [ 'emacsclient', '-c', '{}' ]
 
 ## hide tabs most of the time
-c.tabs.show = 'switching'
+c.tabs.show = 'never'
 
 ## restrict content
 c.content.javascript.enabled = False
