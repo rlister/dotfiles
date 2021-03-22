@@ -30,6 +30,14 @@ Emacs.mode-line-buffer-id.attributeForeground: PaleGreen
 Emacs.mode-line-highlight.attributeBox: nil
 Emacs.mode-line-highlight.attributeForeground: Cyan
 
+!! menus when using lucid
+!! https://www.gnu.org/software/emacs/manual/html_node/emacs/Lucid-Resources.html#Lucid-Resources
+Emacs.menu*.background: grey14
+Emacs.menu*.foreground: aquamarine3
+Emacs.menu*buttonForeground: Cyan
+Emacs.menu*.shadowThickness: 1
+Emacs.menu*.font: Terminus:size=12
+
 !! arch xterm defaults to xterm, but has 256color support
 XTerm.termName: xterm-256color
 
