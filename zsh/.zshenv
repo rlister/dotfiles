@@ -59,3 +59,5 @@ export GPG_TTY=$(tty)
 
 ## need this for qt5 to read qt5ct config file
 export QT_QPA_PLATFORMTHEME=qt5ct
+
+source ~/.zsh/asdf.zsh
