@@ -1,9 +1,8 @@
 !! font may vary by display
 Emacs.font: Roboto Mono:size=15
-! Emacs.italic.attributeFamily: Roboto Mono-Italic
+Emacs.italic.attributeFamily: Roboto Mono-Italic
 Emacs.fixed-pitch.attributeFamily: Terminus
-! Emacs.fixed-pitch-serif.attributeFamily: Roboto Mono
-! Emacs.variable-pitch.attributeFamily: Roboto Mono
+Emacs.variable-pitch.attributeFamily: Roboto
 
 !! remove ui elements to speed startup
 Emacs.cursorBlink: false
