@@ -33,15 +33,12 @@
   Mod4 + w
 
 ## pass
-"passmenu -fn 'xos4 Terminus:size=12'"
+"passmenu -fn 'Terminus:style=Regular:size=12'"
   Mod4 + u
 
 ## pass username
-"LINE=2 passmenu -fn 'xos4 Terminus:size=12'"
+"LINE=2 passmenu -fn 'Terminus:style=Regular:size=12'"
   Mod4 + Shift + u
-
-# "LINE=2 passrofi"
-#   Mod4 + Shift + u
 
 ## enable trackpad
 "xinput enable 11"
