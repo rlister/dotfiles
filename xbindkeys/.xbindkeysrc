@@ -60,6 +60,9 @@
 "setxkbmap -option ctrl:swapcaps"
   Mod4 + z
 
+"xkill"
+  Mod4 + x
+
 # "dunstctl close"
 #   Mod4 + minus
 
