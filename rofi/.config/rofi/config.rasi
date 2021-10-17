@@ -1,0 +1,6 @@
+configuration {
+	modi: "windowcd,window,run,combi";
+	font: "Roboto Mono 11";
+	combi-modi: "window,run";
+	theme: "Arc-Dark";
+}
