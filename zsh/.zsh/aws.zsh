@@ -58,7 +58,7 @@ function smput() {
 function s() {
   (
     cd $(git rev-parse --show-toplevel)/ops;
-    bundle exec stax $*
+    bundle exec stax "$@"
   )
 }
 
