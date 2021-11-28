@@ -14,6 +14,9 @@ c.tabs.show = 'never'
 c.content.javascript.enabled = False
 c.content.images = False
 
+## ask to reduce motion elements
+c.content.prefers_reduced_motion = True
+
 ## alias key everywhere
 c.bindings.key_mappings = {
   '<ctrl-g>': '<escape>'
