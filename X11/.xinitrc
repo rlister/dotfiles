@@ -14,6 +14,7 @@ xset r rate 200 25
 
 ## set my keyboard model
 setxkbmap -model kinesis
+setxkbmap -option compose:menu
 
 ## bind media keys etc
 xbindkeys
