@@ -1,4 +1,4 @@
-fpath=(~/etc/zsh/completion $fpath)
+fpath=(~/.zsh/completion $fpath)
 autoload -U compinit && compinit
 
 ## add bash compatibility (needed for aws and asdf)
