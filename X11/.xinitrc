@@ -27,7 +27,7 @@ picom &
 unclutter -noevents -root &
 redshift &
 dunst &
-clipmenud &
+CM_SELECTIONS=clipboard clipmenud &
 dwmstatus &
 xscreensaver &
 emacs -bg-daemon
