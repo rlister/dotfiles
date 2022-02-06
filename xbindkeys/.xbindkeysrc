@@ -18,6 +18,10 @@
 "clipmenu -fn 'Roboto Mono-12'"
   Mod4 + y
 
+## push primary to clipboard, for use by broken gtk apps
+"xsel -p | xsel -b -i"
+  Mod4 + Shift + y
+
 ## run commands
 "rofi -show run"
   Mod4 + r
