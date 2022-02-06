@@ -1,5 +1,5 @@
 !! font may vary by display
-Emacs.font: Roboto Mono:size=15
+Emacs.font: Roboto Mono:size=15:weight=medium
 Emacs.italic.attributeFamily: Roboto Mono-Italic
 Emacs.fixed-pitch.attributeFamily: Terminus
 Emacs.variable-pitch.attributeFamily: Roboto
