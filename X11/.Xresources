@@ -133,4 +133,7 @@ XTerm.vt100.translations: #override \n\
   Ctrl <Key> minus: smaller-vt-font() \n\
   Ctrl <Key> plus: larger-vt-font() \n\
   Ctrl <Key> 0: set-vt-font(d) \n\
-  Alt <Key> 0: set-render-font(toggle)
+  Alt <Key> 0: set-render-font(toggle) \n\
+  Ctrl <Key> Insert: copy-selection(CLIPBOARD) \n\
+  Ctrl <Key> V: insert-selection(CLIPBOARD)
+
