@@ -1,0 +1,23 @@
+## -*- mode: conf-unix; -*-
+
+## unifi gateway
+Host 192.168.1.1
+  User admin
+
+## pihole
+Host pi 192.168.1.2
+  User pi
+
+## unifi devices, downgrade for old dropbear
+Host 192.168.1.21 192.168.1.23
+  User admin
+  HostKeyAlgorithms +ssh-rsa
+
+Host *.amazonaws.com 54.* 52.* 107.* 184.* 174.* 75.* 34.* 204.*
+  User ec2-user
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
+  IdentitiesOnly yes
+
+Host murphy tetley velo
+  User ric
