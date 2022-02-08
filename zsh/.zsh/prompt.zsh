@@ -28,7 +28,7 @@ else
     [ "$AWS_ACCOUNT_NAME" ] && [ "$AWS_ACCOUNT_ROLE" ] && echo "%F{blue}$AWS_ACCOUNT_NAME/$AWS_ACCOUNT_ROLE%f"
   }
 
-  PROMPT=$'%F{blue}%T %F{cyan}%2~ %F{green}%L:${AWS_VAULT:+$AWS_VAULT}:$(aws_account)${vcs_info_msg_0_}%f%(!.#.$) '
+  PROMPT=$'%F{blue}%T %F{cyan}%m:%2~ %F{green}%L:${AWS_VAULT:+$AWS_VAULT}:$(aws_account)${vcs_info_msg_0_}%f%(!.#.$) '
 fi
 
 ## emacs vterm hackage
