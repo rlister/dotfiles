@@ -108,25 +108,31 @@ XTerm*ScrollBar: off
 XTerm*colorMode:    True
 XTerm*dynamicColor: On
 
+! Name	Black	Red	Green	Yellow	Blue	Magenta	Cyan	White
+! Code	0	1	2	3	4	5	6	7
+! Normal	000000	AA0000	00AA00	AAAA00	0000AA	AA00AA	00AAAA	AAAAAA
+! Code	8	9	10	11	12	13	13	15
+! Bold	555555	FF5555	55FF55	FFFF55	5555FF	FF55FF	55FFFF	FFFFFF
+
 !! ansi foreground colors
 XTerm*VT100*color0:  Black
 XTerm*VT100*color1:  IndianRed
 XTerm*VT100*color2:  PaleGreen
 XTerm*VT100*color3:  DarkGoldenrod
 XTerm*VT100*color4:  CornflowerBlue
-XTerm*VT100*color5:  #B5A0FF    !magenta
+XTerm*VT100*color5:  #B5A0FF
 XTerm*VT100*color6:  SkyBlue
-XTerm*VT100*color7:  azure4     !grey
-XTerm*VT100*color8:  Black
+XTerm*VT100*color7:  azure4
 
 !! bright colors
+XTerm*VT100*color8:  DarkGrey
 XTerm*VT100*color9:  IndianRed1
 XTerm*VT100*color10: PaleGreen1
 XTerm*VT100*color11: DarkGoldenrod1
 XTerm*VT100*color12: MediumPurple1
 XTerm*VT100*color13: Gray
 XTerm*VT100*color14: SkyBlue1
-XTerm*VT100*color15: DarkGrey
+XTerm*VT100*color15: azure4
 
 !! keybindings
 XTerm.vt100.translations: #override \n\
@@ -137,3 +143,4 @@ XTerm.vt100.translations: #override \n\
   Ctrl <Key> Insert: copy-selection(CLIPBOARD) \n\
   Ctrl <Key> V: insert-selection(CLIPBOARD)
 
+XTerm.vt100.modifyOtherKeys: 1

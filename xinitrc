@@ -34,3 +34,6 @@ emacs -bg-daemon
 
 ## window manager
 exec dwm
+
+## cleanup
+emacsclient -e '(kill-emacs)'

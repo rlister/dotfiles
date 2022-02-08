@@ -37,7 +37,8 @@
   Mod4 + w
 
 ## pass
-"passmenu -fn 'Terminus:style=Regular:size=12'"
+# "passmenu -fn 'Terminus:style=Regular:size=12'"
+"passdmenu"
   Mod4 + u
 
 ## pass username
@@ -72,3 +73,8 @@
 
 # "dunstctl history-pop"
 #   Mod4 + backslash
+
+# "xvkbd -no-jump-pointer -xsendevent -text "\D1`xsel -s`" -delay 10 2>/dev/null"
+# "xdotool type `xsel -s`"
+"xvkbd -no-jump-pointer -no-repeat -text "\D1`xsel -p`" -delay 0 2>/dev/null"
+  Pause
