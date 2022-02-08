@@ -29,15 +29,3 @@ clean:
 ~/.config/%:
 	@mkdir -pv $(@D)
 	@ln -sfvr $(PWD)/$* $@
-
-# PKGS?=zsh
-# DIR?=~
-
-# stow:
-# 	stow -v -t $(DIR) $(PKGS)
-
-# test:
-# 	stow -v -n -t $(DIR) $(PKGS)
-
-# uninstall:
-# 	stow -v -n -t $(DIR) -D $(PKGS)
