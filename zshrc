@@ -1,7 +1,6 @@
 # zmodload zsh/zprof
 
 # -*- mode: shell-script; -*-
-source ~/.zsh/completion.zsh
 source ~/.zsh/aws.zsh
 HISTFILE=~/.zsh_history
 SAVEHIST=10000                  # num lines to keep in histfile
@@ -29,6 +28,15 @@ unsetopt nomatch                # makes zsh play nice with square brackets
 unsetopt menu_complete          # do not autoselect the first completion entry
 unsetopt SHINSTDIN
 setopt prompt_subst             # do parameter expansion in prompt string
+
+## completion
+autoload -U compinit && compinit
+zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}" # file completion colors
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'      # match uppercase from lower
+
+## bash completion compatibility
+autoload bashcompinit && bashcompinit
+complete -C aws_completer aws
 
 ## builtin git support for prompt
 autoload -Uz vcs_info
