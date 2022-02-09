@@ -6,7 +6,7 @@ export PATH="${HOME}/bin:/usr/local/bin:/usr/bin"
 # PATH=$PATH:$(python -m site --user-base)/bin
 
 ## darwin
-# PATH="${HOME}/bin:${PATH}:/usr/local/sbin:/usr/local/bin:/Library/TeX/texbin"
+# PATH="${HOME}/bin:${PATH}:$(brew --prefix)/opt/coreutils/libexec/gnubin:/usr/local/sbin:/usr/local/bin:/Library/TeX/texbin"
 
 ## from zshrc?
 # PATH="${HOME}/bin:${PATH}:/usr/local/sbin:/usr/local/bin:/opt/local/bin:${HOME}/local/node/bin:${HOME}/code/go/bin:/usr/local/opt/go/libexec/bin"
