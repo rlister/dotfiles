@@ -1,7 +1,6 @@
 # zmodload zsh/zprof
 
 # -*- mode: shell-script; -*-
-source ~/.zsh/aliases.zsh
 source ~/.zsh/completion.zsh
 source ~/.zsh/aws.zsh
 HISTFILE=~/.zsh_history
@@ -63,6 +62,48 @@ if [ "$INSIDE_EMACS" == "vterm" ]; then
   print -Pn "\e]2;%~\a"  # start shell with correct title
 fi
 
+case $(uname) in
+  Linux)
+    eval `dircolors ~/.dir_colors`
+    alias ls='ls --color=auto -hF'
+    ;;
+  Darwin)
+    if [ -x "$(which gdircolors)" ] ; then    ## brew install coreutils
+      eval `gdircolors ~/.dir_colors`
+      alias ls='gls --color=auto -hF'
+    fi
+    ;;
+esac
+
+alias ave='aws-vault exec'
+alias be='bundle exec'
+alias bi='bundle install'
+alias bu='bundle update'
+alias ec='emacsclient'
+alias gu='git pull --rebase --autostash' # see https://github.com/aanand/git-up
+alias k='kubectl'
+alias ll='ls -l'
+alias w2='AWS_REGION=us-west-2'
+
+## run stax from correct location
+function s() {
+  (
+    cd $(git rev-parse --show-toplevel)/ops;
+    bundle exec stax "$@"
+  )
+}
+
+function pget() {
+  aws ssm get-parameter --name "$1" | jq -r '.Parameter | .Name + " " + .Value'
+}
+
+function ppath() {
+  aws ssm get-parameters-by-path --path $1 | jq -r '.Parameters| .[] | .Name + " " + .Value'
+}
+
+function pput() {
+  aws ssm put-parameter --name "$1" --value "$2" --type String --overwrite
+}
 
 ## TODO this does not belong here
 PATH="${HOME}/bin:${PATH}:/usr/local/sbin:/usr/local/bin:/opt/local/bin:${HOME}/local/node/bin:${HOME}/code/go/bin:/usr/local/opt/go/libexec/bin"
