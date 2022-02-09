@@ -68,20 +68,9 @@ if [ "$INSIDE_EMACS" == "vterm" ]; then
   print -Pn "\e]2;%~\a"  # start shell with correct title
 fi
 
-case $(uname) in
-  Linux)
-    eval `dircolors ~/.dir_colors`
-    alias ls='ls --color=auto -hF'
-    ;;
-  Darwin)
-    if [ -x "$(which gdircolors)" ] ; then    ## brew install coreutils
-      eval `gdircolors ~/.dir_colors`
-      alias ls='gls --color=auto -hF'
-    fi
-    ;;
-esac
-
 alias ave='aws-vault exec'
+eval `dircolors ~/.dir_colors`
+
 alias be='bundle exec'
 alias bi='bundle install'
 alias bu='bundle update'
@@ -89,6 +78,7 @@ alias ec='emacsclient'
 alias gu='git pull --rebase --autostash' # see https://github.com/aanand/git-up
 alias k='kubectl'
 alias ll='ls -l'
+alias ls='ls --color=auto -hF'
 alias w2='AWS_REGION=us-west-2'
 
 ## run stax from correct location
