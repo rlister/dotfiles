@@ -5,6 +5,7 @@ TARGETS := \
 	~/.config/redshift.conf \
 	~/.config/rofi/config.rasi \
 	~/.dir_colors \
+	~/.screenrc \
 	~/.ssh/config \
 	~/.themes \
 	~/.xbindkeysrc \
