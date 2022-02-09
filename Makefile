@@ -1,4 +1,5 @@
 TARGETS := \
+	~/.config/dunst/dunstrc \
 	~/.config/k9s/views.yml \
 	~/.config/picom.conf \
 	~/.config/redshift.conf \
