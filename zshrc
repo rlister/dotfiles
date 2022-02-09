@@ -1,7 +1,7 @@
 # zmodload zsh/zprof
 
 # -*- mode: shell-script; -*-
-source ~/.zsh/aws.zsh
+
 HISTFILE=~/.zsh_history
 SAVEHIST=10000                  # num lines to keep in histfile
 HISTSIZE=1024                   # num lines to keep in session
