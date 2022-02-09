@@ -1,7 +1,6 @@
 # zmodload zsh/zprof
 
 # -*- mode: shell-script; -*-
-source ~/.zsh/prompt.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/completion.zsh
 source ~/.zsh/aws.zsh
@@ -31,6 +30,38 @@ unsetopt nomatch                # makes zsh play nice with square brackets
 unsetopt menu_complete          # do not autoselect the first completion entry
 unsetopt SHINSTDIN
 setopt prompt_subst             # do parameter expansion in prompt string
+
+## builtin git support for prompt
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' stagedstr     '%F{yellow}+'
+zstyle ':vcs_info:*' unstagedstr   '%F{red}-'
+zstyle ':vcs_info:*' formats       ' %c%u%F{green}%b%f'
+zstyle ':vcs_info:*' actionformats ' %c%u%F{green}%b|%F{red}%a%f '
+
+## prompt string
+if [ "$TERM" == "dumb" ]; then
+  unsetopt zle
+  PS1='%2~%(!.#.$) '
+else
+  precmd () { vcs_info }        # update vcs before every prompt
+  PROMPT=$'%F{blue}%T %F{cyan}%m:%2~ %F{green}%L:${AWS_VAULT:+$AWS_VAULT}:${vcs_info_msg_0_}%f%(!.#.$) '
+fi
+
+## extra setup for vterm
+if [ "$INSIDE_EMACS" == "vterm" ]; then
+  vterm_printf() { printf "\e]%s\e\\" "$1" }
+
+  ## magic at end of prompt for vterm to use in vterm-previous-prompt
+  vterm_prompt_end() { vterm_printf "51;A$(whoami)@$(hostname):$(pwd)" }
+  PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
+
+  ## set terminal title for vterm-buffer-name-string to use
+  autoload -U add-zsh-hook
+  add-zsh-hook -Uz chpwd (){ print -Pn "\e]2;%~\a" }
+  print -Pn "\e]2;%~\a"  # start shell with correct title
+fi
 
 
 ## TODO this does not belong here
