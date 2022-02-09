@@ -2,6 +2,7 @@ TARGETS := \
 	~/.config/dunst/dunstrc \
 	~/.config/k9s/views.yml \
 	~/.config/picom.conf \
+	~/.config/qutebrowser/config.py \
 	~/.config/redshift.conf \
 	~/.config/rofi/config.rasi \
 	~/.dir_colors \
