@@ -111,6 +111,5 @@ function pput() {
   aws ssm put-parameter --name "$1" --value "$2" --type String --overwrite
 }
 
-## TODO this does not belong here
-PATH="${HOME}/bin:${PATH}:/usr/local/sbin:/usr/local/bin:/opt/local/bin:${HOME}/local/node/bin:${HOME}/code/go/bin:/usr/local/opt/go/libexec/bin"
-export PATH
+## https://asdf-vm.com/#/core-manage-asdf-vm?id=add-to-your-shell
+. /opt/asdf-vm/asdf.sh
