@@ -103,4 +103,4 @@ function pput() {
 }
 
 ## https://asdf-vm.com/#/core-manage-asdf-vm?id=add-to-your-shell
-. /opt/asdf-vm/asdf.sh
+source /opt/asdf-vm/asdf.sh
