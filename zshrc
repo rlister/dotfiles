@@ -1,5 +1,3 @@
-# zmodload zsh/zprof
-
 # -*- mode: shell-script; -*-
 
 HISTFILE=~/.zsh_history
@@ -116,5 +114,3 @@ function pput() {
 ## TODO this does not belong here
 PATH="${HOME}/bin:${PATH}:/usr/local/sbin:/usr/local/bin:/opt/local/bin:${HOME}/local/node/bin:${HOME}/code/go/bin:/usr/local/opt/go/libexec/bin"
 export PATH
-
-# zprof
