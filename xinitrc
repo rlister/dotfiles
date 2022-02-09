@@ -1,3 +1,5 @@
+# -*- mode: shell-script; -*-
+
 ## xsetroot does not work with compton
 hsetroot -solid black
 
