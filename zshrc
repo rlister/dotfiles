@@ -68,15 +68,16 @@ if [ "$INSIDE_EMACS" == "vterm" ]; then
   print -Pn "\e]2;%~\a"  # start shell with correct title
 fi
 
-alias ave='aws-vault exec'
 eval `dircolors ~/.dir_colors`
 
+alias av='aws-vault exec'
 alias be='bundle exec'
 alias bi='bundle install'
 alias bu='bundle update'
-alias ec='emacsclient'
+alias ec='emacsclient -t'
 alias gu='git pull --rebase --autostash' # see https://github.com/aanand/git-up
 alias k='kubectl'
+alias kx='kubectx'
 alias ll='ls -l'
 alias ls='ls --color=auto -hF'
 alias w2='AWS_REGION=us-west-2'
