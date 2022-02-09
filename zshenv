@@ -1,26 +1,15 @@
 ## -*-shell-script-*-
-## set env vars
 
-## this should be installed in ~/etc/profile, make symlinks as follows:
-## ~/.zshenv for zsh (unlike .zprofile, will source for non-login shells)
-## ~/.profile for bash
+export PATH="${HOME}/bin:/usr/local/bin:/usr/bin"
 
-## for some reason, echoing from this file will break emacs tramp
-## logins, but is ok from e.g. .zshrc; need to figure out why
-#echo 'Running profile $Revision: 1.7 $ ...'
+## python local pip installs: is this needed?
+# PATH=$PATH:$(python -m site --user-base)/bin
 
-case $(uname) in
-  Linux)
-    PATH="${HOME}/bin:${HOME}/.krew/bin:/usr/local/bin:/usr/bin"
-    ## python local pip installs
-    PATH=$PATH:$(python -m site --user-base)/bin
-    export PATH
-    ;;
-  Darwin)
-    PATH="${HOME}/bin:${PATH}:/usr/local/sbin:/usr/local/bin:/Library/TeX/texbin"
-    export PATH
-    ;;
-esac
+## darwin
+# PATH="${HOME}/bin:${PATH}:/usr/local/sbin:/usr/local/bin:/Library/TeX/texbin"
+
+## from zshrc?
+# PATH="${HOME}/bin:${PATH}:/usr/local/sbin:/usr/local/bin:/opt/local/bin:${HOME}/local/node/bin:${HOME}/code/go/bin:/usr/local/opt/go/libexec/bin"
 
 ## for remote hosts
 # export CMDLINE_EDITOR=emacs
