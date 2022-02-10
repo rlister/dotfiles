@@ -1,6 +1,7 @@
 TARGETS := \
 	~/.config/dunst/dunstrc \
 	~/.config/k9s/views.yml \
+	~/.config/k9s/skin.yml \
 	~/.config/picom.conf \
 	~/.config/qutebrowser/config.py \
 	~/.config/redshift.conf \
