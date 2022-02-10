@@ -90,17 +90,5 @@ function s() {
   )
 }
 
-function pget() {
-  aws ssm get-parameter --name "$1" | jq -r '.Parameter | .Name + " " + .Value'
-}
-
-function ppath() {
-  aws ssm get-parameters-by-path --path $1 | jq -r '.Parameters| .[] | .Name + " " + .Value'
-}
-
-function pput() {
-  aws ssm put-parameter --name "$1" --value "$2" --type String --overwrite
-}
-
 ## https://asdf-vm.com/#/core-manage-asdf-vm?id=add-to-your-shell
 source /opt/asdf-vm/asdf.sh
