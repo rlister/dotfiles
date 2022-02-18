@@ -1,5 +1,4 @@
 ##-*-shell-script-*-
-## Ric's config for gnu screen
 
 ## caption (use lastline for tabs)
 ## %{-s db}  standout off, default bg, blue fg
@@ -15,10 +14,11 @@
 ## %-0<      fill from right to mark truncation point
 #caption always "%{-s db}%-Lw%{.c}%n:%t%{-}%+Lw%45>%=%h%-0<"
 #caption always "%{-s db}|%H| %-Lw%{.c}%n%{-}%+Lw"
-caption always "%{-s db}|%H| %-Lw%{.c}%n*%f %t%{-}%+Lw"
+#caption always "%{-s db}|%H| %-Lw%{.c}%n*%f %t%{-}%+Lw"
 
 ## hardstatus (update xterm title)
-hardstatus string "%H: [screen %-n - %t] [$HOSTNAME]"
+# hardstatus string "%{-s db}%=%H:%-n"
+hardstatus off
 
 ## default title for new windows
 shelltitle ''
@@ -39,8 +39,8 @@ bind b other
 vbell off
 vbell_msg "x"
 
-## fix xterm's scrollbar
-termcapinfo xterm ti@:te@
+## fix scrolling in xterm and vterm
+termcapinfo xterm* ti@:te@
 
 ## increase scrollback buffer
 defscrollback 5000
