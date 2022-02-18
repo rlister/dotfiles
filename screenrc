@@ -16,6 +16,8 @@
 #caption always "%{-s db}|%H| %-Lw%{.c}%n%{-}%+Lw"
 #caption always "%{-s db}|%H| %-Lw%{.c}%n*%f %t%{-}%+Lw"
 
+startup_message off
+
 ## hardstatus (update xterm title)
 # hardstatus string "%{-s db}%=%H:%-n"
 hardstatus off
