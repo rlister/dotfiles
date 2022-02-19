@@ -21,3 +21,5 @@ Host *.amazonaws.com 54.* 52.* 107.* 184.* 174.* 75.* 34.* 204.*
 
 Host murphy tetley velo
   User ric
+  ControlMaster auto
+  ControlPath ~/.ssh/master-%r@%h:%p
