@@ -56,7 +56,14 @@ fi
 
 ## extra setup for vterm
 if [ "$INSIDE_EMACS" == "vterm" ]; then
-  vterm_printf() { printf "\e]%s\e\\" "$1" }
+  ## how to send data to vterm in screen and xterm
+  vterm_printf() {
+    if [ -n "$STY" ]; then
+      printf "\eP\e]%s\007\e\\" "$1"
+    else
+      printf "\e]%s\e\\" "$1"
+    fi
+  }
 
   ## magic at end of prompt for vterm to use in vterm-previous-prompt
   vterm_prompt_end() { vterm_printf "51;A$(whoami)@$(hostname):$(pwd)" }
