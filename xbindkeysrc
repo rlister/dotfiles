@@ -68,10 +68,11 @@
 "xkill"
   Mod4 + x
 
-# "dunstctl close"
-#   Mod4 + minus
+"dunstctl close"
+  Mod4 + minus
 
-# "dunstctl history-pop"
-#   Mod4 + backslash
+"dunstctl history-pop"
+  Mod4 + backslash
 
+"systemctl suspend"
   Pause
