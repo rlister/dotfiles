@@ -27,6 +27,9 @@ unsetopt menu_complete          # do not autoselect the first completion entry
 unsetopt SHINSTDIN
 setopt prompt_subst             # do parameter expansion in prompt string
 
+## user local completions
+fpath=($fpath ~/.zsh/completion)
+
 ## completion
 autoload -U compinit && compinit
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}" # file completion colors
