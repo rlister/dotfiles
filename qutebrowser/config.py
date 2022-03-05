@@ -64,6 +64,8 @@ config.bind('<ctrl-x>b', 'set-cmd-text -s :tab-select')
 config.bind('<ctrl-i>', 'set-cmd-text -s :open')
 config.bind('<ctrl-Down>', 'tab-next')
 config.bind('<ctrl-Up>', 'tab-prev')
+config.bind('<ctrl-.>', 'tab-next')
+config.bind('<ctrl-,>', 'tab-prev')
 
 ## search
 config.bind('<ctrl-s>', 'set-cmd-text /', mode='normal')
