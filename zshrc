@@ -95,7 +95,7 @@ alias w2='AWS_REGION=us-west-2'
 ## run stax from correct location
 function s() {
   (
-    cd $(git rev-parse --show-toplevel)/ops;
+    cd -q $(git rev-parse --show-toplevel)/ops;
     bundle exec stax "$@"
   )
 }
