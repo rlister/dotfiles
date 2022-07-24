@@ -31,3 +31,6 @@ export AWS_FEDERATION_TOKEN_TTL=12h
 export GPG_TTY=$(tty) # needed for pinentry-tty when aws-vault writes sessions to pass
 
 export QT_QPA_PLATFORMTHEME=qt5ct # for qt5 to read qt5ct config file
+
+source /usr/share/chruby/chruby.sh
+chruby 2.7.5
