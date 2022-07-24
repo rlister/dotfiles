@@ -54,7 +54,7 @@ if [ "$TERM" == "dumb" ]; then
   PS1='%2~%(!.#.$) '
 else
   precmd () { vcs_info }        # update vcs before every prompt
-  PROMPT=$'%F{blue}%T${STY+-} ${SSH_TTY+%m }%F{cyan}%2~ %F{green}%L${AWS_VAULT:+:$AWS_VAULT}${vcs_info_msg_0_}%f%(!.#.$) '
+  PROMPT=$'%F{blue}%T${STY+-} ${SSH_TTY+%m }%F{cyan}%2~%F{green}${AWS_VAULT:+ $AWS_VAULT}${AWS_REGION:+:$AWS_REGION}${vcs_info_msg_0_}%f%(!.#.$) '
 fi
 
 ## extra setup for vterm
