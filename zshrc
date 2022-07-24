@@ -114,7 +114,3 @@ function s() {
     bundle exec stax "$@"
   )
 }
-
-## https://asdf-vm.com/#/core-manage-asdf-vm?id=add-to-your-shell
-# source /opt/asdf-vm/asdf.sh
-# chruby 2.7.5
