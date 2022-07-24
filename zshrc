@@ -90,7 +90,22 @@ alias k='kubectl'
 alias kx='kubectx'
 alias ll='ls -l'
 alias ls='ls --color=auto -hF'
+
+alias e1='AWS_REGION=us-east-1'
+alias w1='AWS_REGION=us-west-1'
 alias w2='AWS_REGION=us-west-2'
+
+alias awful='docker run -it -e AWS_REGION -e AWS_SESSION_TOKEN -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY awful'
+alias cf='awful cf'
+alias ssm='awful ssm'
+alias dyn='awful dyn'
+
+function kiali() {
+  kubectl -n istio-system port-forward services/kiali 20001 &
+  sleep 1
+  xdg-open http://localhost:20001
+  fg
+}
 
 ## run stax from correct location
 function s() {
