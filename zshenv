@@ -1,9 +1,7 @@
 ## -*-shell-script-*-
 
-export PATH="${HOME}/bin:/usr/local/bin:/usr/bin"
-
-## python local pip installs: is this needed?
-# PATH=$PATH:$(python -m site --user-base)/bin
+## .local/bin for pip install --user
+export PATH="${HOME}/bin:${HOME}/.local/bin:/usr/local/bin:/usr/bin:"
 
 ## darwin
 # PATH="${HOME}/bin:${PATH}:$(brew --prefix)/opt/coreutils/libexec/gnubin:/usr/local/sbin:/usr/local/bin:/Library/TeX/texbin"
