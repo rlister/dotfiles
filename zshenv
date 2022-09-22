@@ -1,7 +1,7 @@
 ## -*-shell-script-*-
 
 ## .local/bin for pip install --user
-export PATH="${HOME}/bin:${HOME}/.local/bin:/usr/local/bin:/usr/bin:"
+export PATH="${HOME}/bin:${HOME}/.local/bin:/usr/local/bin:/usr/bin:${HOME}/go/bin"
 
 ## darwin
 # PATH="${HOME}/bin:${PATH}:$(brew --prefix)/opt/coreutils/libexec/gnubin:/usr/local/sbin:/usr/local/bin:/Library/TeX/texbin"
