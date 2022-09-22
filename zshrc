@@ -91,9 +91,9 @@ alias kx='kubectx'
 alias ll='ls -l'
 alias ls='ls --color=auto -hF'
 
-alias e1='AWS_REGION=us-east-1'
-alias w1='AWS_REGION=us-west-1'
-alias w2='AWS_REGION=us-west-2'
+alias e1='AWS_REGION=us-east-1 AWS_DEFAULT_REGION=us-east-1'
+alias w1='AWS_REGION=us-west-1 AWS_DEFAULT_REGION=us-west-1'
+alias w2='AWS_REGION=us-west-2 AWS_DEFAULT_REGION=us-west-2'
 
 alias awful='docker run -it -e AWS_REGION -e AWS_SESSION_TOKEN -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY awful'
 alias cf='awful cf'
