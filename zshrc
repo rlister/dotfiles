@@ -86,10 +86,14 @@ alias bi='bundle install'
 alias bu='bundle update'
 alias ec='emacsclient -t'
 alias gu='git pull --rebase --autostash' # see https://github.com/aanand/git-up
-alias k='kubectl'
-alias kx='kubectx'
 alias ll='ls -l'
 alias ls='ls --color=auto -hF'
+
+alias k='kubectl'
+alias kn='kubens'
+alias kx='kubectx'
+alias t='tkn'
+alias hf='helmfile'
 
 alias e1='AWS_REGION=us-east-1 AWS_DEFAULT_REGION=us-east-1'
 alias w1='AWS_REGION=us-west-1 AWS_DEFAULT_REGION=us-west-1'
