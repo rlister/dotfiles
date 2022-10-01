@@ -55,11 +55,14 @@ NORMAL 00	# global default, although everything should be something.
 FILE   00 	# normal file
 DIR    00;36 	# directory
 LINK   00;34 	# symbolic link
+# LINK target
 FIFO   40;34	# pipe
 SOCK   00;34	# socket
 BLK    40;33;01	# block device driver
 CHR    40;33;01 # character device driver
 EXEC   00;32    # This is for files with execute permission:
+SETUID 31
+SETGID 33
 
 # List any file extensions like '.gz' or '.tar' that you would like ls
 # to colorize below. Put the extension, a space, and the color init string.
