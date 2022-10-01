@@ -77,6 +77,11 @@ config.bind('<ctrl-r>', 'search-prev', mode='command')
 config.bind('<ctrl-x>b', 'open qute://bindings/')
 config.bind('<ctrl-h><ctrl-h>', 'set-cmd-text -s :help')
 
+## pass userscript (ships with archlinux package qutebrowser)
+config.bind(',p', 'spawn --userscript qute-pass -w')
+config.bind(',u', 'spawn --userscript qute-pass -e --username-target secret --username-pattern "\\n(.+)"')
+config.bind(',P', 'spawn --userscript qute-pass --username-target secret --username-pattern "\\n(.+)"')
+
 ## page color scheme
 c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.preferred_color_scheme = 'dark'
