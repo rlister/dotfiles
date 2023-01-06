@@ -80,6 +80,14 @@ fi
 
 eval `dircolors ~/.dir_colors`
 
+## emacs-vterm and xterm
+bindkey ';5C' forward-word
+bindkey ';5D' backward-word
+bindkey ';5~' kill-word
+
+## xterm
+bindkey '^H' backward-kill-word
+
 alias av='aws-vault exec'
 alias be='bundle exec'
 alias bi='bundle install'
