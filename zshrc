@@ -54,7 +54,7 @@ if [ "$TERM" == "dumb" ]; then
   PS1='%2~%(!.#.$) '
 else
   precmd () { vcs_info }        # update vcs before every prompt
-  PROMPT=$'%F{blue}%T${STY+-} ${SSH_TTY+%m }%F{cyan}%2~%F{green}${AWS_VAULT:+ $AWS_VAULT}${AWS_REGION:+:$AWS_REGION}${vcs_info_msg_0_}%f%(!.#.$) '
+  PROMPT=$'%F{blue}%T${STY+-} ${SSH_TTY+%m }%F{cyan}%2~%F{green}${AWS_VAULT:+ $AWS_VAULT}${SA_PROFILE:+ $SA_PROFILE}${AWS_REGION:+:$AWS_REGION}${vcs_info_msg_0_}%f%(!.#.$) '
 fi
 
 ## extra setup for vterm
@@ -94,10 +94,15 @@ alias kn='kubens'
 alias kx='kubectx'
 alias t='tkn'
 alias hf='helmfile'
+function sa() {
+  saml2aws exec --exec-profile $1 SA_PROFILE=$1 zsh
+}
 
 alias e1='AWS_REGION=us-east-1 AWS_DEFAULT_REGION=us-east-1'
 alias w1='AWS_REGION=us-west-1 AWS_DEFAULT_REGION=us-west-1'
 alias w2='AWS_REGION=us-west-2 AWS_DEFAULT_REGION=us-west-2'
+alias sc='saml2aws console --exec-profile'
+alias sl='saml2aws login'
 
 alias awful='docker run -it -e AWS_REGION -e AWS_SESSION_TOKEN -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY awful'
 alias ssm='awful ssm'
