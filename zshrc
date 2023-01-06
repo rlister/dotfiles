@@ -98,13 +98,14 @@ alias t='tkn'
 alias hf='helmfile'
 alias tf='terraform'
 
+alias e1='export AWS_REGION=us-east-1 AWS_DEFAULT_REGION=us-east-1'
+alias w1='export AWS_REGION=us-west-1 AWS_DEFAULT_REGION=us-west-1'
+alias w2='export AWS_REGION=us-west-2 AWS_DEFAULT_REGION=us-west-2'
+
 function sa() {
   saml2aws exec --exec-profile $1 SA_PROFILE=$1 zsh
 }
 
-alias e1='AWS_REGION=us-east-1 AWS_DEFAULT_REGION=us-east-1'
-alias w1='AWS_REGION=us-west-1 AWS_DEFAULT_REGION=us-west-1'
-alias w2='AWS_REGION=us-west-2 AWS_DEFAULT_REGION=us-west-2'
 alias sc='saml2aws console --exec-profile'
 alias sl='saml2aws login'
 
