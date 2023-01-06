@@ -110,8 +110,6 @@ alias sc='saml2aws console --exec-profile'
 alias sl='saml2aws login'
 
 alias awful='docker run -it -e AWS_REGION -e AWS_SESSION_TOKEN -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY awful'
-alias ssm='awful ssm'
-alias dyn='awful dyn'
 
 function kiali() {
   kubectl -n istio-system port-forward services/kiali 20001 &
