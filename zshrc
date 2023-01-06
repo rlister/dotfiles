@@ -94,6 +94,8 @@ alias kn='kubens'
 alias kx='kubectx'
 alias t='tkn'
 alias hf='helmfile'
+alias tf='terraform'
+
 function sa() {
   saml2aws exec --exec-profile $1 SA_PROFILE=$1 zsh
 }
