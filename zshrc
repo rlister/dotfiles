@@ -130,6 +130,13 @@ function kiali() {
   fg
 }
 
+function prom() {
+  kubectl -n prometheus port-forward deploy/prometheus-server 9090 &
+  sleep 1
+  xdg-open http://localhost:9090
+  fg
+}
+
 ## run stax from correct location
 function s() {
   (
