@@ -131,4 +131,4 @@ c.fonts.web.family.fantasy = 'Source Serif Pro'
 c.fonts.web.family.fixed = 'Roboto Mono'
 c.fonts.web.size.default = 18
 c.fonts.web.size.default_fixed = 14
-c.fonts.web.size.minimum = 18
+c.fonts.web.size.minimum = 10
