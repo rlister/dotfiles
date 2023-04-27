@@ -35,4 +35,4 @@ export SAML2AWS_KEYRING_BACKEND=pass
 export QT_QPA_PLATFORMTHEME=qt5ct # for qt5 to read qt5ct config file
 
 source /usr/share/chruby/chruby.sh
-chruby 2.7.5
+chruby 3.2.2
