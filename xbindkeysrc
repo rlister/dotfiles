@@ -76,3 +76,6 @@
 
 "systemctl suspend"
   Pause
+
+"echo -n /slackfont roboto mono | xsel -i -b"
+  Mod4 + s
