@@ -144,3 +144,7 @@ XTerm.vt100.translations: #override \n\
   Ctrl <Key> V: insert-selection(CLIPBOARD)
 
 XTerm.vt100.modifyOtherKeys: 1
+
+Sxiv*background: gray25
+Sxiv*foreground: Black
+Sxiv.font: Terminus
