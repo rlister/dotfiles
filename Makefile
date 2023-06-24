@@ -1,4 +1,5 @@
 TARGETS := \
+	~/.config/alacritty.yml \
 	~/.config/dunst/dunstrc \
 	~/.config/k9s/views.yml \
 	~/.config/k9s/skin.yml \
