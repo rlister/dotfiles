@@ -35,7 +35,7 @@ xscreensaver --no-splash &
 emacs --daemon
 
 ## window manager
-exec dwm
+exec "${WM:-dwm}"
 
 ## cleanup
 emacsclient -e '(kill-emacs)'
