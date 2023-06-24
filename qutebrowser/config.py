@@ -132,3 +132,15 @@ c.fonts.web.family.fixed = 'Roboto Mono'
 c.fonts.web.size.default = 18
 c.fonts.web.size.default_fixed = 14
 c.fonts.web.size.minimum = 10
+
+## https://www.reddit.com/r/qutebrowser/comments/mnptey/getting_rid_of_cookie_consent_barspopups/
+config.bind('ek', 'jseval (function () { '+
+'  var i, elements = document.querySelectorAll("body *");'+
+''+
+'  for (i = 0; i < elements.length; i++) {'+
+'    var pos = getComputedStyle(elements[i]).position;'+
+'    if (pos === "fixed" || pos == "sticky") {'+
+'      elements[i].parentNode.removeChild(elements[i]);'+
+'    }'+
+'  }'+
+'})();');
