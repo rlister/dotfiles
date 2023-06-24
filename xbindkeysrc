@@ -68,3 +68,6 @@
 
 "echo -n /slackfont roboto mono | xsel -i -b"
   Mod4 + s
+
+"xdotool key Caps_Lock"
+  Mod4 + apostrophe
