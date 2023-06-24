@@ -18,23 +18,12 @@
 "clipmenu -fn 'Roboto Mono-12'"
   Mod4 + y
 
-## push primary to clipboard, for use by broken gtk apps
-"xsel -p | xsel -b -i"
-  Mod4 + Shift + y
-
-## run commands
-"rofi -show run"
-  Mod4 + r
-
 "emacsclient -c"
   Mod4 + equal
 
-"rofi -show run"
+# "rofi -show run"
+"dmenu_run"
   Mod4 + space
-
-## list windows
-"rofi -show window"
-  Mod4 + w
 
 ## pass
 # "passmenu -fn 'Terminus:style=Regular:size=12'"
@@ -54,7 +43,7 @@
   Mod4 + BackSpace
 
 "setxkbmap -option ctrl:swapcaps"
-  Mod4 + Caps_Lock
+  Mod4 + z
 
 "xfce4-screenshooter"
   Print
