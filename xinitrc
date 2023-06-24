@@ -31,8 +31,8 @@ redshift &
 dunst &
 CM_SELECTIONS=clipboard clipmenud &
 dwmstatus &
-emacs -bg-daemon
 xscreensaver --no-splash &
+emacs --daemon
 
 ## window manager
 exec dwm
