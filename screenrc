@@ -25,17 +25,15 @@ hardstatus off
 ## default title for new windows
 shelltitle ''
 
-#setenv RIC $WINDOWID
-
-## use C-z as escape key instead of C-a
+## escape key to replace C-a
 escape ''
-escape ^Zz
+escape ^t^t
 
 ## make 'C-z b' behave like 'C-X b' in emacs (toggle between buffers/windows)
 bind b other
 
-## gimme long windowlist instead of short for C-x w
-#bind w windowlist
+## long windowlist
+bind l windowlist
 
 ## no visual bell (flash)
 vbell off
