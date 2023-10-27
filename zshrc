@@ -134,6 +134,12 @@ function kiali() {
   fg
 }
 
+function kubeflow() {
+  kubectl port-forward svc/istio-ingressgateway --address 127.0.0.1 -n istio-system 8080:80 &
+  sleep 1
+  xdg-open http://localhost:8080
+}
+
 function prom() {
   kubectl -n prometheus port-forward deploy/prometheus-server 9090 &
   sleep 1
