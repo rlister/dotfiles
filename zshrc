@@ -107,8 +107,6 @@ alias k='kubectl'
 alias kn='kubie ns'
 # alias kx='kubectx'
 alias kx='kubie ctx'
-alias t='tkn'
-alias hf='helmfile'
 alias tf='terraform'
 
 # alias e1='export AWS_REGION=us-east-1 AWS_DEFAULT_REGION=us-east-1'
