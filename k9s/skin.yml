@@ -34,7 +34,7 @@ k9s:
       fgColor: *green
       focusColor: *grey
     menu:
-      fgColor: *grey
+      fgColor: *foreground
       keyColor: *blue
       numKeyColor: *cyan
     crumbs:
