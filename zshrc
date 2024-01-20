@@ -58,8 +58,7 @@ else
     KCTX=$(kubie info ctx 2> /dev/null)
   }
 
-  # PROMPT=$'%F{blue}%T${STY+-} ${SSH_TTY+%m }%F{cyan}%2~%F{green}${AWS_VAULT:+ $AWS_VAULT}${SA_PROFILE:+ $SA_PROFILE}${AWS_REGION:+:$AWS_REGION}${vcs_info_msg_0_}%f%(!.#.$) '
-  PROMPT=$'${SSH_TTY+%m }%F{cyan}%2~%F{green}${SA:+ $SA}${AWS_REGION:+:${AWS_REGION//??-/}}${KCTX:+:${KCTX}}${vcs_info_msg_0_}%f%(!.#.$) '
+  PROMPT=$'${SSH_TTY+%m }%F{cyan}%2~%F{green}${AWS_PROFILE:+ ${AWS_PROFILE//-arcadia-admin/}}${AWS_REGION:+:${AWS_REGION//??-/}}${KCTX:+:${KCTX}}${vcs_info_msg_0_}%f%(!.#.$) '
 fi
 
 ## extra setup for vterm
@@ -116,14 +115,16 @@ alias e1='export AWS_REGION=us-east-1'
 alias w1='export AWS_REGION=us-west-1'
 alias w2='export AWS_REGION=us-west-2'
 
-function sa() {
-  AWS_REGION=us-east-1 SA=$1 saml2aws exec --exec-profile $1 zsh
-}
+alias gac='OKTA_PASSWORD=$(pass show arcadia.okta.com|head -1) gimme-aws-creds -m'
+alias dev='export AWS_PROFILE=dev AWS_REGION=us-east-1'
+alias prod='export AWS_PROFILE=prod AWS_REGION=us-east-1'
+alias data='export AWS_PROFILE=data AWS_REGION=us-east-1'
+alias root='export AWS_PROFILE=root AWS_REGION=us-east-1'
 
-alias sc='saml2aws console --exec-profile'
-alias sl='saml2aws login'
-
-alias awful='docker run -it -e AWS_REGION -e AWS_SESSION_TOKEN -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY awful'
+alias dev1='AWS_PROFILE=dev AWS_REGION=us-east-1 kubie ctx dev1'
+alias ai1='AWS_PROFILE=dev AWS_REGION=us-east-1 kubie ctx ai1'
+alias prod1='AWS_PROFILE=prod AWS_REGION=us-east-1 kubie ctx prod1'
+alias data1='AWS_PROFILE=data AWS_REGION=us-east-1 kubie ctx data1'
 
 function kiali() {
   kubectl -n istio-system port-forward services/kiali 20001 &
