@@ -32,8 +32,8 @@ config.bind('x', 'tab-close')
 config.bind('X', 'undo')
 
 config.bind('<alt-w>', 'yank')
-config.bind('<alt-x>', 'set-cmd-text :')
-config.bind('<ctrl-x>m', 'set-cmd-text :')
+config.bind('<alt-x>', 'cmd-set-text :')
+config.bind('<ctrl-x>m', 'cmd-set-text :')
 config.bind('<ctrl-x><u>', 'undo')
 config.bind('<ctrl-x><ctrl-c>', 'close')
 config.bind('<ctrl-x><ctrl-s>', 'session-save')
@@ -59,23 +59,23 @@ config.bind('d', 'scroll-page 0 0.5')
 config.bind('u', 'scroll-page 0 -0.5')
 
 ## buffers/tabs
-config.bind('<ctrl-t>', 'set-cmd-text -s :tab-select')
-config.bind('<ctrl-x>b', 'set-cmd-text -s :tab-select')
-config.bind('<ctrl-i>', 'set-cmd-text -s :open')
+config.bind('<ctrl-t>', 'cmd-set-text -s :tab-select')
+config.bind('<ctrl-x>b', 'cmd-set-text -s :tab-select')
+config.bind('<ctrl-i>', 'cmd-set-text -s :open')
 config.bind('<ctrl-Down>', 'tab-next')
 config.bind('<ctrl-Up>', 'tab-prev')
 config.bind('<ctrl-.>', 'tab-next')
 config.bind('<ctrl-,>', 'tab-prev')
 
 ## search
-config.bind('<ctrl-s>', 'set-cmd-text /', mode='normal')
-config.bind('<ctrl-r>', 'set-cmd-text ?', mode='normal')
+config.bind('<ctrl-s>', 'cmd-set-text /', mode='normal')
+config.bind('<ctrl-r>', 'cmd-set-text ?', mode='normal')
 config.bind('<ctrl-s>', 'search-next', mode='command')
 config.bind('<ctrl-r>', 'search-prev', mode='command')
 
 ## help
 config.bind('<ctrl-x>b', 'open qute://bindings/')
-config.bind('<ctrl-h><ctrl-h>', 'set-cmd-text -s :help')
+config.bind('<ctrl-h><ctrl-h>', 'cmd-set-text -s :help')
 
 ## pass userscript (ships with archlinux package qutebrowser)
 config.bind(',p', 'spawn --userscript qute-pass -w')
