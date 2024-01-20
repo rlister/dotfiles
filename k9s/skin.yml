@@ -1,6 +1,7 @@
 # OneDark presets
 foreground: &foreground "#abb2bf"
 background: &background "black"
+# background: &background "default"
 black: &black "#080808"
 blue: &blue "cornflowerblue"
 cyan: &cyan "mediumaquamarine"
