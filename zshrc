@@ -97,6 +97,7 @@ alias be='bundle exec'
 alias bi='bundle install'
 alias bu='bundle update'
 alias ec='emacsclient -t'
+alias gd='rclone mount gd: ~/gd'
 alias gu='git pull --rebase --autostash' # see https://github.com/aanand/git-up
 alias ll='ls -l'
 alias ls='ls --color=auto -hF'
