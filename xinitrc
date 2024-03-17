@@ -32,6 +32,8 @@ dunst &
 CM_SELECTIONS=clipboard clipmenud &
 dwmstatus &
 xscreensaver --no-splash &
+eval $(ssh-agent)
+ssh-add ~/.ssh/id_ed25519
 emacs --daemon
 
 ## window manager
