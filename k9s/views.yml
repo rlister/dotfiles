@@ -1,20 +1,19 @@
 ## install to ~/.k9s/views.yml
-k9s:
-  views:
-    v1/pods:
-      columns:
-        - NAMESPACE
-        - NAME
-        - AGE
-        - READY
-        - RESTARTS
-        - STATUS
-        - CPU
-        - MEM
-        - "%CPU/R"
-        - "%CPU/L"
-        - "%MEM/R"
-        - "%MEM/L"
-        - IP
-        - NODE
-        - PF
+views:
+  v1/pods:
+    columns:
+      - NAMESPACE
+      - NAME
+      - AGE
+      - READY
+      - RESTARTS
+      - STATUS
+      - CPU
+      - MEM
+      - "%CPU/R"
+      - "%CPU/L"
+      - "%MEM/R"
+      - "%MEM/L"
+      - IP
+      - NODE
+      - PF
