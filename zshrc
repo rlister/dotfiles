@@ -123,8 +123,12 @@ alias data='export AWS_PROFILE=data AWS_REGION=us-east-1'
 alias root='export AWS_PROFILE=root AWS_REGION=us-east-1'
 
 alias dev1='AWS_PROFILE=dev AWS_REGION=us-east-1 kubie ctx dev1'
+alias dev3='AWS_PROFILE=dev AWS_REGION=us-west-1 kubie ctx dev3'
 alias ai1='AWS_PROFILE=dev AWS_REGION=us-east-1 kubie ctx ai1'
+alias int1='AWS_PROFILE=prod AWS_REGION=us-east-1 kubie ctx int1'
+alias uat1='AWS_PROFILE=prod AWS_REGION=us-east-1 kubie ctx uat1'
 alias prod1='AWS_PROFILE=prod AWS_REGION=us-east-1 kubie ctx prod1'
+alias prod3='AWS_PROFILE=prod AWS_REGION=us-west-1 kubie ctx prod3'
 alias data1='AWS_PROFILE=data AWS_REGION=us-east-1 kubie ctx data1'
 
 function kiali() {
