@@ -23,3 +23,7 @@ Host murphy tetley velo
   User ric
   ControlMaster auto
   ControlPath ~/.ssh/master-%r@%h:%p
+
+Host github.com
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519
