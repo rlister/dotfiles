@@ -27,10 +27,10 @@ unsetopt menu_complete          # do not autoselect the first completion entry
 unsetopt SHINSTDIN
 setopt prompt_subst             # do parameter expansion in prompt string
 
-## user local completions
+eval `dircolors ~/.dir_colors`
+
 fpath=($fpath ~/.zsh/completion)
 
-## completion
 autoload -U compinit && compinit
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}" # file completion colors
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'      # match uppercase from lower
@@ -81,8 +81,6 @@ if [ "$INSIDE_EMACS" == "vterm" ]; then
   add-zsh-hook -Uz chpwd (){ print -Pn "\e]2;%~\a" }
   print -Pn "\e]2;%~\a"  # start shell with correct title
 fi
-
-eval `dircolors ~/.dir_colors`
 
 ## emacs-vterm and xterm
 bindkey ';5C' forward-word
