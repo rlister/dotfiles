@@ -7,6 +7,7 @@ TARGETS := \
 	~/.config/qutebrowser/config.py \
 	~/.config/redshift.conf \
 	~/.config/rofi/config.rasi \
+	~/.config/sxhkd/sxhkdrc \
 	~/.dir_colors \
 	~/.screenrc \
 	~/.ssh/config \

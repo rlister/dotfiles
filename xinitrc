@@ -18,10 +18,7 @@ xset r rate 200 25
 setxkbmap -model kinesis
 setxkbmap -option compose:menu
 
-## bind media keys etc
-xbindkeys
-
-## xorg settings
+sxhkd &
 xrdb ~/.Xresources
 
 ## import DISPLAY to systemd user session

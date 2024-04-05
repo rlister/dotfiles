@@ -1,0 +1,30 @@
+Print
+  maim -s /tmp/maim.png && xclip -selection clipboard /tmp/maim.png -t image/png
+
+Scroll_Lock
+  xscreensaver-command -lock
+
+super + Return
+	st
+
+super + @space
+	dmenu_run
+
+super + r
+	pkill -USR1 -x sxhkd
+
+super + s
+  echo -n /slackfont roboto mono | xsel -i -b
+
+super + u
+  passdmenu
+
+super + y
+  clipmenu
+  # clipmenu -fn 'Roboto Mono-12'
+
+super + z
+  setxkbmap -option ctrl:swapcaps
+
+{XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
+  vol {up,down,toggle}
