@@ -1,0 +1,34 @@
+Gdk/WindowScalingFactor 1
+
+Gtk/ButtonImages 0
+Gtk/CanChangeAccels 0
+Gtk/ColorPalette "black:white:gray50:red:purple:blue:light blue:green:yellow:orange:lavender:brown:goldenrod4:dodger blue:pink:light green:gray10:gray30:gray75:gray90"
+Gtk/CursorThemeName "Adwaita"
+Gtk/CursorThemeSize 0
+Gtk/DecorationLayout "menu:minimize,maximize,close"
+Gtk/DialogsUseHeader 0
+Gtk/FontName "Roboto 11"
+Gtk/IconSizes ""
+Gtk/KeyThemeName "Emacs"
+Gtk/MenuBarAccel "F10"
+Gtk/MenuImages 0
+Gtk/MonospaceFontName "Roboto Mono 10"
+Gtk/TitlebarMiddleClick "lower"
+Gtk/ToolbarIconSize 3
+Gtk/ToolbarStyle "icons"
+
+Net/CursorBlink 0
+Net/CursorBlinkTime 10000
+Net/DndDragThreshold 8
+Net/DoubleClickDistance 5
+Net/DoubleClickTime 400
+Net/EnableEventSounds 0
+Net/EnableInputFeedbackSounds 0
+Net/IconThemeName "elementary"
+Net/SoundThemeName "default"
+Net/ThemeName "Adwaita-dark"
+
+Xft/Antialias 1
+Xft/HintStyle "hintfull"
+Xft/Hinting 1
+Xft/RGBA "none"

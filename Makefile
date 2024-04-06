@@ -14,6 +14,7 @@ TARGETS := \
 	~/.themes \
 	~/.xbindkeysrc \
 	~/.xinitrc \
+	~/.xsettingsd \
 	~/.xmodmap \
 	~/.Xresources \
 	~/.zshenv \
