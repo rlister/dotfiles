@@ -1,14 +1,10 @@
 # -*- mode: shell-script; -*-
 
-## xsetroot does not work with compton
-hsetroot -solid black
-
 ## no beeps
 xset b off
 
-## settings daemons
-xfsettingsd &
-xfce4-power-manager --daemon  # brightness controls
+# xfce4-power-manager --daemon  # brightness controls
+# /usr/lib/xdg-desktop-portal-gtk -r &
 
 ## sane trackball settings
 xinput --set-prop 10 'libinput Accel Profile Enabled' 0, 1
@@ -18,13 +14,12 @@ xset r rate 200 25
 setxkbmap -model kinesis
 setxkbmap -option compose:menu
 
-sxhkd &
-xrdb ~/.Xresources
-
 ## import DISPLAY to systemd user session
 source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 
-## daemons
+xrdb ~/.Xresources
+
+xsettingsd &
 picom &
 unclutter -noevents -root &
 redshift &
@@ -36,7 +31,7 @@ eval $(ssh-agent)
 ssh-add ~/.ssh/id_ed25519
 emacs --daemon
 
-## window manager
+sxhkd &
 exec "${WM:-dwm}"
 
 ## cleanup
