@@ -148,3 +148,10 @@ XTerm.vt100.modifyOtherKeys: 1
 Sxiv*background: gray25
 Sxiv*foreground: Black
 Sxiv.font: Terminus
+
+Nsxiv.window.background: gray25
+Nsxiv.window.foreground: cyan
+Nsxiv.bar.font: Terminus
+Nsxiv.bar.background: Black
+Nsxiv.bar.foreground: PaleGreen
+Nsxiv.mark.foreground: IndianRed
