@@ -35,11 +35,9 @@ autoload -U compinit && compinit
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}" # file completion colors
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'      # match uppercase from lower
 
-## bash completion compatibility
-autoload bashcompinit && bashcompinit
+autoload bashcompinit && bashcompinit # for aws-cli
 complete -C aws_completer aws
 
-## builtin git support for prompt
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
