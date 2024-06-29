@@ -66,74 +66,76 @@ precmd () {
 
 PS1=$'${SSH_TTY+%m }%F{cyan}%2~%F{green}${prof}${vcs_info_msg_0_}%f%(!.#.$) '
 
-## extra setup for vterm
 if [ "$INSIDE_EMACS" == "vterm" ]; then
-  ## how to send data to vterm in screen and xterm
-  vterm_printf() {
-    if [ -n "$STY" ]; then
-      printf "\eP\e]%s\007\e\\" "$1"
-    else
-      printf "\e]%s\e\\" "$1"
-    fi
-  }
+  # vterm_printf() { printf "\e]%s\e\\" "$1" } #screen
+  # vterm_printf() { printf "\eP\e]%s\007\e\\" "$1" } #xterm
 
-  ## magic at end of prompt for vterm to use in vterm-previous-prompt
-  vterm_prompt_end() { vterm_printf "51;A$(whoami)@$(hostname):$(pwd)" }
-  PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
+  if [ "${TERM%%-*}" = "screen" ]; then
+    vterm_printf() { printf "\eP\e]%s\007\e\\" "$1" }
+  else
+    vterm_printf() { printf "\e]%s\e\\" "$1" }
+  fi
 
-  ## set terminal title for vterm-buffer-name-string to use
+  # alias clear='vterm_printf "51;Evterm-clear-scrollback";tput clear'
+
+  vterm_prompt_end() { vterm_printf "51;A$(whoami)@$(hostname):$(pwd)" } #vterm-previous-prompt
+  PS1=$PS1'%{$(vterm_prompt_end)%}'
+
   autoload -U add-zsh-hook
-  add-zsh-hook -Uz chpwd (){ print -Pn "\e]2;%~\a" }
+  add-zsh-hook -Uz chpwd() { print -Pn "\e]2;%~\a" }  #term title for vterm-buffer-name-string
+  # chpwd "." #start with correct title
   print -Pn "\e]2;%~\a"  # start shell with correct title
 fi
 
-## emacs-vterm and xterm
-bindkey ';5C' forward-word
-bindkey ';5D' backward-word
-bindkey ';5~' kill-word
+bindkey ';5C' forward-word      # C-right
+bindkey ';5D' backward-word     # C-left
+bindkey ';5~' kill-word         # C-backspace
+bindkey '^H' backward-kill-word # xterm
 
-## xterm
-bindkey '^H' backward-kill-word
-
-alias av='aws-vault exec'
 alias be='bundle exec'
 alias bi='bundle install'
 alias bu='bundle update'
+alias cr='. /usr/share/chruby/chruby.sh; chruby 3'
 alias ec='emacsclient -t'
-alias flush='ssh pi pihole restartdns'
-alias gd='rclone mount gd: ~/gd'
+alias flush='ssh pi@192.168.1.2 pihole restartdns'
+alias gd='rclone mount gd: ~/mnt'
 alias gu='git pull --rebase --autostash' # see https://github.com/aanand/git-up
+alias h=history
 alias ll='ls -l'
 alias ls='ls --color=auto -hF'
+alias m=less
 
 alias k='kubectl'
-# alias kn='kubens'
-alias kn='kubie ns'
-# alias kx='kubectx'
-alias kx='kubie ctx'
 alias tf='terraform'
 
-# alias e1='export AWS_REGION=us-east-1 AWS_DEFAULT_REGION=us-east-1'
-# alias w1='export AWS_REGION=us-west-1 AWS_DEFAULT_REGION=us-west-1'
-# alias w2='export AWS_REGION=us-west-2 AWS_DEFAULT_REGION=us-west-2'
-alias e1='export AWS_REGION=us-east-1'
-alias w1='export AWS_REGION=us-west-1'
-alias w2='export AWS_REGION=us-west-2'
-
-alias gac='OKTA_PASSWORD=$(pass show arcadia.okta.com|head -1) gimme-aws-creds -m'
 alias dev='export AWS_PROFILE=dev AWS_REGION=us-east-1'
 alias prod='export AWS_PROFILE=prod AWS_REGION=us-east-1'
 alias data='export AWS_PROFILE=data AWS_REGION=us-east-1'
 alias root='export AWS_PROFILE=root AWS_REGION=us-east-1'
+alias ext='export AWS_PROFILE=ext AWS_REGION=us-east-1'
 
-alias dev1='AWS_PROFILE=dev AWS_REGION=us-east-1 kubie ctx dev1'
-alias dev3='AWS_PROFILE=dev AWS_REGION=us-west-1 kubie ctx dev3'
-alias ai1='AWS_PROFILE=dev AWS_REGION=us-east-1 kubie ctx ai1'
-alias int1='AWS_PROFILE=prod AWS_REGION=us-east-1 kubie ctx int1'
-alias uat1='AWS_PROFILE=prod AWS_REGION=us-east-1 kubie ctx uat1'
-alias prod1='AWS_PROFILE=prod AWS_REGION=us-east-1 kubie ctx prod1'
-alias prod3='AWS_PROFILE=prod AWS_REGION=us-west-1 kubie ctx prod3'
-alias data1='AWS_PROFILE=data AWS_REGION=us-east-1 kubie ctx data1'
+alias e1='export AWS_REGION=us-east-1'
+alias w1='export AWS_REGION=us-west-1'
+alias w2='export AWS_REGION=us-west-2'
+
+# alias dev1='export AWS_PROFILE=dev AWS_REGION=us-east-1 KUBECONFIG=~/.kube/dev1.yaml'
+alias dev1='dev; e1; kx dev1'
+alias dev3='dev; w1; kx dev3'
+alias prod1='prod; e1; kx prod1'
+alias prod3='prod; w1; kx prod3'
+alias int1='prod; e1; kx int1'
+alias uat1='prod; e1; kx uat1'
+alias ai1='dev; e1; kx ai1'
+alias aidev1='dev; e1; kx aidev1'
+alias data1='data; e1; kx data1'
+
+function ku() {
+  aws eks update-kubeconfig --kubeconfig ~/.kube/$1.yaml --name $1 --alias $1
+}
+
+function kx() {
+  export KUBECONFIG=~/.kube/$1.yaml KX=$1
+}
 
 function kiali() {
   kubectl -n istio-system port-forward services/kiali 20001 &
