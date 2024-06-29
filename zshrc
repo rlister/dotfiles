@@ -164,3 +164,8 @@ function s() {
     bundle exec stax "$@"
   )
 }
+
+function logtail {
+  account=$(aws sts get-caller-identity --query Account --output text)
+  aws logs start-live-tail --log-group-identifiers "arn:aws:logs:${AWS_REGION}:${account}:log-group:$1"
+}
