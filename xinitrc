@@ -15,9 +15,10 @@ dwmstatus &
 xscreensaver --no-splash &
 eval $(ssh-agent)
 ssh-add ~/.ssh/id_ed25519
-emacs --daemon
 
 sxhkd &
+test -S "$XDG_RUNTIME_DIR/emacs/server" || emacs --daemon
+
 exec "${WM:-dwm}"
 
 ## cleanup
