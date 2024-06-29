@@ -59,6 +59,13 @@ else
   PROMPT=$'${SSH_TTY+%m }%F{cyan}%2~%F{green}${AWS_PROFILE:+ ${AWS_PROFILE//-arcadia-admin/}}${AWS_REGION:+:${AWS_REGION//??-/}}${KCTX:+:${KCTX}}${vcs_info_msg_0_}%f%(!.#.$) '
 fi
 
+precmd () {
+  vcs_info
+  prof=${AWS_PROFILE:+ ${AWS_PROFILE}:${AWS_REGION//??-/}:${KX}}
+}
+
+PS1=$'${SSH_TTY+%m }%F{cyan}%2~%F{green}${prof}${vcs_info_msg_0_}%f%(!.#.$) '
+
 ## extra setup for vterm
 if [ "$INSIDE_EMACS" == "vterm" ]; then
   ## how to send data to vterm in screen and xterm
