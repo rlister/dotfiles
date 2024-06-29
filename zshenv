@@ -20,15 +20,6 @@ export PAGER=less
 ## see https://wiki.archlinux.org/index.php/Firefox/Tweaks#Pixel-perfect_trackpad_scrolling
 export MOZ_USE_XINPUT2=1
 
-## aws-vault
-export AWS_VAULT_BACKEND=pass
-export AWS_VAULT_PROMPT=terminal
-export AWS_VAULT_PASS_PASSWORD_STORE_DIR=~/.cache/aws-vault
-export AWS_SESSION_TOKEN_TTL=12h
-export AWS_CHAINED_SESSION_TOKEN_TTL=12h
-export AWS_ASSUME_ROLE_TTL=12h
-export AWS_FEDERATION_TOKEN_TTL=12h
-
 export GPG_TTY=$(tty) # needed for pinentry-tty when aws-vault writes sessions to pass
 export SAML2AWS_KEYRING_BACKEND=pass
 
