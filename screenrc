@@ -61,3 +61,5 @@ termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 altscreen on
 term screen-256color
 maptimeout 1
+
+shell "/bin/zsh"
