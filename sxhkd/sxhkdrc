@@ -1,14 +1,18 @@
+# -*- mode: conf; -*-
 Print
   maim -s /tmp/maim.png && xclip -selection clipboard /tmp/maim.png -t image/png
 
 Scroll_Lock
   xscreensaver-command -lock
 
-super + Return
+super + equal
+  emacsclient -c
+
+super + shift + Return
 	st
 
 super + @space
-	dmenu_run
+  dmenu_run
 
 super + r
 	pkill -USR1 -x sxhkd
@@ -21,10 +25,9 @@ super + u
 
 super + y
   clipmenu
-  # clipmenu -fn 'Roboto Mono-12'
 
 super + z
   setxkbmap -option ctrl:swapcaps
 
 {XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
-  vol {up,down,toggle}
+  notify-send -r 256 -t 2000 volume $(amixer set Master {5%+,5%-,toggle} | awk 'END\{print $5 $6\}')
