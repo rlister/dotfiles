@@ -21,5 +21,7 @@ test -S "$XDG_RUNTIME_DIR/emacs/server" || emacs --daemon
 
 exec "${WM:-dwm}"
 
+pkill clipmenud
+
 ## cleanup
 emacsclient -e '(kill-emacs)'
