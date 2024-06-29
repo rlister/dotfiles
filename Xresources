@@ -2,7 +2,9 @@
 Emacs.font: Roboto Mono:size=15:weight=medium
 Emacs.italic.attributeFamily: Roboto Mono-Italic
 Emacs.fixed-pitch.attributeFamily: Terminus
+! Emacs.variable-pitch.attributeFamily: Liberation Serif
 Emacs.variable-pitch.attributeFamily: Roboto
+Emacs.shr-text.attributeFamily: TeX Gyre Schola
 
 !! remove ui elements to speed startup
 Emacs.cursorBlink: false
@@ -13,6 +15,7 @@ Emacs.verticalScrollBars: false
 
 !! set up basics for use before theme is lazy-loaded
 Emacs.background: Black
+Emacs*background: Black
 Emacs.foreground: azure4
 Emacs.cursorColor: PaleGreen
 
