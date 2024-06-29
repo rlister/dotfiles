@@ -1,5 +1,6 @@
 # -*- mode: shell-script; -*-
 
+export QT_QPA_PLATFORMTHEME=qt6ct
 
 xset b off
 
