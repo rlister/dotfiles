@@ -120,14 +120,15 @@ c.colors.tabs.selected.even.fg = 'cyan'
 c.colors.tabs.selected.odd.bg = 'Black'
 c.colors.tabs.selected.odd.fg = 'cyan'
 
+c.downloads.location.directory = "~/tmp"
+
 c.fonts.default_family = 'Roboto Mono'
 c.fonts.default_size = '11pt'
 
-c.fonts.web.family.standard = 'Source Sans Pro'
-c.fonts.web.family.sans_serif = 'Source Sans Pro'
-c.fonts.web.family.serif = 'Source Serif Pro'
-c.fonts.web.family.cursive = 'Source Serif Pro'
-c.fonts.web.family.fantasy = 'Source Serif Pro'
+# c.fonts.web.family.standard = 'Source Sans Pro'
+c.fonts.web.family.standard = 'Input Mono'
+c.fonts.web.family.sans_serif = 'Input Mono'
+c.fonts.web.family.serif = 'Input Mono'
 c.fonts.web.family.fixed = 'Roboto Mono'
 c.fonts.web.size.default = 18
 c.fonts.web.size.default_fixed = 14
