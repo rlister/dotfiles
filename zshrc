@@ -113,6 +113,7 @@ alias prod='export AWS_PROFILE=prod AWS_REGION=us-east-1'
 alias data='export AWS_PROFILE=data AWS_REGION=us-east-1'
 alias root='export AWS_PROFILE=root AWS_REGION=us-east-1'
 alias ext='export AWS_PROFILE=ext AWS_REGION=us-east-1'
+alias gen='export AWS_PROFILE=gen AWS_REGION=us-west-1'
 
 alias e1='export AWS_REGION=us-east-1'
 alias w1='export AWS_REGION=us-west-1'
@@ -169,3 +170,5 @@ function logtail {
   account=$(aws sts get-caller-identity --query Account --output text)
   aws logs start-live-tail --log-group-identifiers "arn:aws:logs:${AWS_REGION}:${account}:log-group:$1"
 }
+
+alias twfix='sudo /bin/sh -c "echo options single-request >> /etc/resolv.conf"'
