@@ -13,15 +13,13 @@ dunst &
 CM_SELECTIONS=clipboard clipmenud &
 dwmstatus &
 xscreensaver --no-splash &
+sxhkd &
+
 eval $(ssh-agent)
 ssh-add ~/.ssh/id_ed25519
 
-sxhkd &
 test -S "$XDG_RUNTIME_DIR/emacs/server" || emacs --daemon
 
 exec "${WM:-dwm}"
 
 pkill clipmenud
-
-## cleanup
-emacsclient -e '(kill-emacs)'
