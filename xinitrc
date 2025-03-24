@@ -6,13 +6,10 @@ xset b off
 
 xrdb ~/.Xresources
 xsettingsd &
-picom &
 unclutter -noevents -root &
-redshift &
-dunst &
+# redshift &
 CM_SELECTIONS=clipboard clipmenud &
 dwmstatus &
-xscreensaver --no-splash &
 sxhkd &
 
 eval $(ssh-agent)
