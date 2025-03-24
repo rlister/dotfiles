@@ -17,11 +17,8 @@ super + @space
 super + r
 	pkill -USR1 -x sxhkd
 
-super + s
-  echo -n /slackfont roboto mono | xsel -i -b
-
 super + u
-  passdmenu
+  emacsclient -e "(call-interactively 'password-store-copy)"
 
 super + y
   clipmenu
