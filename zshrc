@@ -4,6 +4,7 @@ HISTFILE=~/.zsh_history
 SAVEHIST=10000                  # num lines to keep in histfile
 HISTSIZE=1024                   # num lines to keep in session
 WORDCHARS=''                    # meta-move on all non-word chars
+PROMPT_EOL_MARK=''              # hide % on partial newlines
 
 setopt append_history           # append history list to the history file
 setopt auto_remove_slash        # space after completed dir removes slash
@@ -46,18 +47,10 @@ zstyle ':vcs_info:*' unstagedstr   '%F{red}-'
 zstyle ':vcs_info:*' formats       ' %c%u%F{green}%b%f'
 zstyle ':vcs_info:*' actionformats ' %c%u%F{green}%b|%F{red}%a%f '
 
-## prompt string
-if [ "$TERM" == "dumb" ]; then
-  unsetopt zle
-  PS1='%2~%(!.#.$) '
-else
-  precmd () {
-    vcs_info
-    KCTX=$(kubie info ctx 2> /dev/null)
-  }
-
-  PROMPT=$'${SSH_TTY+%m }%F{cyan}%2~%F{green}${AWS_PROFILE:+ ${AWS_PROFILE//-arcadia-admin/}}${AWS_REGION:+:${AWS_REGION//??-/}}${KCTX:+:${KCTX}}${vcs_info_msg_0_}%f%(!.#.$) '
-fi
+# if [ "$TERM" == "dumb" ]; then
+#   unsetopt zle
+#   PS1='%2~%(!.#.$) ' # for eshell?
+# else
 
 precmd () {
   vcs_info
@@ -106,14 +99,17 @@ alias ls='ls --color=auto -hF'
 alias m=less
 
 alias k='kubectl'
+alias kar='kubectl-argo-rollouts'
 alias tf='terraform'
 
-alias dev='export AWS_PROFILE=dev AWS_REGION=us-east-1'
-alias prod='export AWS_PROFILE=prod AWS_REGION=us-east-1'
-alias data='export AWS_PROFILE=data AWS_REGION=us-east-1'
-alias root='export AWS_PROFILE=root AWS_REGION=us-east-1'
-alias ext='export AWS_PROFILE=ext AWS_REGION=us-east-1'
-alias gen='export AWS_PROFILE=gen AWS_REGION=us-west-1'
+alias dev='export AWS_PROFILE=dev-admin AWS_REGION=us-east-1'
+alias devdev='export AWS_PROFILE=dev-developer AWS_REGION=us-east-1'
+alias devread='export AWS_PROFILE=dev-read AWS_REGION=us-east-1'
+alias prod='export AWS_PROFILE=prod-admin AWS_REGION=us-east-1'
+alias data='export AWS_PROFILE=data-admin AWS_REGION=us-east-1'
+alias root='export AWS_PROFILE=root-admin AWS_REGION=us-east-1'
+alias ext='export AWS_PROFILE=ext-admin AWS_REGION=us-east-1'
+alias gen='export AWS_PROFILE=gen-admin AWS_REGION=us-west-1'
 
 alias e1='export AWS_REGION=us-east-1'
 alias w1='export AWS_REGION=us-west-1'
@@ -172,3 +168,7 @@ function logtail {
 }
 
 alias twfix='sudo /bin/sh -c "echo options single-request >> /etc/resolv.conf"'
+
+alias brown='sox -q -c 2 -r 32000 -n -d -D synth 12:00:00 brownnoise vol 0.1 fade t 3'
+
+alias kcurl='kubectl run -it --rm rictest --image curlimages/curl -l sidecar.istio.io/inject=true -- sh'
