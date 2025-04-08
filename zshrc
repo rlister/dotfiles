@@ -107,6 +107,7 @@ alias devdev='export AWS_PROFILE=dev-developer AWS_REGION=us-east-1'
 alias devread='export AWS_PROFILE=dev-read AWS_REGION=us-east-1'
 alias prod='export AWS_PROFILE=prod-admin AWS_REGION=us-east-1'
 alias data='export AWS_PROFILE=data-admin AWS_REGION=us-east-1'
+alias ops='export AWS_PROFILE=ops-admin AWS_REGION=us-east-1'
 alias root='export AWS_PROFILE=root-admin AWS_REGION=us-east-1'
 alias ext='export AWS_PROFILE=ext-admin AWS_REGION=us-east-1'
 alias gen='export AWS_PROFILE=gen-admin AWS_REGION=us-west-1'
@@ -168,7 +169,12 @@ function logtail {
 }
 
 alias twfix='sudo /bin/sh -c "echo options single-request >> /etc/resolv.conf"'
-
 alias brown='sox -q -c 2 -r 32000 -n -d -D synth 12:00:00 brownnoise vol 0.1 fade t 3'
-
 alias kcurl='kubectl run -it --rm rictest --image curlimages/curl -l sidecar.istio.io/inject=true -- sh'
+
+function hr() {
+  app=$(basename $(git rev-parse --show-toplevel))
+  ref=$(git symbolic-ref --short HEAD)
+  prefix=$(printf "${app}-${ref}" | tr -c '[:alnum:]\n' '-')
+  printf ${prefix:0:53} | tr '[:upper:]' '[:lower:]' | sed -e 's/-\+$//' | xsel -ib
+}
