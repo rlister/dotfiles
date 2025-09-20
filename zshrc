@@ -185,3 +185,8 @@ function hr() {
   prefix=$(printf "${app}-${ref}" | tr -c '[:alnum:]\n' '-')
   printf ${prefix:0:53} | tr '[:upper:]' '[:lower:]' | sed -e 's/-\+$//' | xsel -ib
 }
+
+function map() {
+  cmd=$1; shift
+  for x in $@; do echo apply $x; $cmd $x; done
+}
