@@ -1,6 +1,7 @@
 ## install to ~/.k9s/views.yml
 views:
   v1/pods:
+    sortColumn: NAME:asc
     columns:
       - NAMESPACE
       - NAME
