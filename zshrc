@@ -87,6 +87,7 @@ bindkey '^H' backward-kill-word # xterm
 
 alias be='bundle exec'
 alias bi='bundle install'
+alias btc=bluetoothctl
 alias bu='bundle update'
 alias cr='. /usr/share/chruby/chruby.sh; chruby 3'
 alias ec='emacsclient -t'
@@ -98,9 +99,10 @@ alias ll='ls -l'
 alias ls='ls --color=auto -hF'
 alias m=less
 
-alias k='kubectl'
-alias kar='kubectl-argo-rollouts'
-alias tf='terraform'
+alias k=kubectl
+alias kai=kubectl-ai
+alias kar=kubectl-argo-rollouts
+alias tf=terraform
 
 alias dev='export AWS_PROFILE=dev-admin AWS_REGION=us-east-1'
 alias devdev='export AWS_PROFILE=dev-developer AWS_REGION=us-east-1'
@@ -126,6 +128,11 @@ alias uat1='prod; e1; kx uat1'
 alias ai1='dev; e1; kx ai1'
 alias aidev1='dev; e1; kx aidev1'
 alias data1='data; e1; kx data1'
+
+alias devp='export AWS_PROFILE=devp-admin AWS_REGION=us-east-1; kx dev'
+alias prodp='export AWS_PROFILE=prodp-admin AWS_REGION=us-east-1; kx prod'
+alias rootp='export AWS_PROFILE=rootp-admin AWS_REGION=us-east-1'
+alias perchprod='export AWS_PROFILE=perch-prod-admin AWS_REGION=us-east-1'
 
 function ku() {
   aws eks update-kubeconfig --kubeconfig ~/.kube/$1.yaml --name $1 --alias $1
