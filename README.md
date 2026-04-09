@@ -1,1 +1,1 @@
-moved to [https://git.sr.ht/~rlister/etc](https://git.sr.ht/~rlister/etc)
+moved to [https://git.sr.ht/~rl/etc](https://git.sr.ht/~rl/etc)
